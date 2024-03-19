@@ -1,0 +1,67 @@
+.left-image{
+    width: 50%;
+    height:100dvh;
+    background-image: url(assets/loginimg.png);
+    background-repeat: no-repeat;
+}
+
+.big-text {
+    font-size: 50px;
+    font-family: "Satoshi";
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.login-form {
+    margin:0 auto;
+}
+.login-form label {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+form {
+    margin-bottom: 5% ;
+}
+form input {
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0) ; 
+    padding: 15px ;
+
+    width: 100%;
+    color: #cecece;
+    margin-bottom: 20px;
+}
+
+.login-form p {
+    color: #00000056;
+    font-size: 15px;
+}
+.login-form p span {
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+}
+.login-form p span a {
+    color: black;
+}
+.login-form p span a:active {
+    color: black;
+}
+.log-btn {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 15px ;
+    width: 108%;
+    text-decoration: none;
+    margin-top: 20px;
+}
+.log-btn a {
+    color: white;
+}
+.log-btn a:active {
+    color: white;
+}
