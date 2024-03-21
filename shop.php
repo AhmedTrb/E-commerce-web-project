@@ -23,7 +23,7 @@
             </div>
             <div class="icons">
                 <div class="icon"><a href="signinPage.php"><img src="assets/profile.svg" height="25px"/></a></div>
-                <div class="icon"><a href=""><img src="assets/cart.svg" height="25px"/></a></div>
+                <div class="icon"><a href="cartPage.php"><img src="assets/cart.svg" height="25px"/></a></div>
             </div>
         </header>
         
@@ -102,7 +102,7 @@
             <div class="footer-item">
                 <img src="assets/SetUpSprint.svg" slt="logo" />
                 <p>We have clothes that suits your style<br> and which you're proud to wear.<br> From women to men.</p>
-                <div class="socials"><img src="assets/Social.svg" alt="socials"/></div>
+                <div class="socials"><a href="https://github.com/AhmedTrb/E-commerce-Website"><img src="assets/Social.svg" alt="socials"/></a></div>
             </div>
             <div class="footer-item">
                 <p class="title">Company</p>

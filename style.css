@@ -11,13 +11,13 @@ header {
     display: flex;
     justify-content: space-between;
     justify-items: center;
-    padding: 10px 10%;
+    padding: 1dvh 10%;
     background-color: #f5f5f5;   
     
 }
 
 .logo {
-    margin-right: 120px;
+    margin-right: 10dvw;
 }
 .left {
     display: flex;
@@ -42,7 +42,7 @@ nav ul  {
 }
 nav ul li {
     display: inline-block;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: black;
 }
 ul li a {
@@ -50,7 +50,7 @@ ul li a {
     color: black;
 }
 .icon {
-    margin: 0 20px;
+    margin: 0 1dvw;
 }
 
 .hero-section {
@@ -60,23 +60,23 @@ ul li a {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height:700px;
+    height:100dvh;
     
 }
 .hero-left {
-   margin: 30px 10%;
+   margin: 2dvh 10%;
 }
 .hero-text {
-    font-size: 80px;
+    font-size: 5.25rem;
     font-weight: bold;
     font-family: "Futura";
     line-height: 0.8;
     letter-spacing: 0.8;
-    margin-bottom: 200px;
+    margin-bottom: 25dvh;
 }
 
 .shop-btn {
-    padding: 16px 55px;
+    padding: 2.5dvh 5dvw;
     justify-content: center;
     border-radius: 60px;
     background-color: black;
@@ -84,7 +84,7 @@ ul li a {
 }
 .shop-btn a {
     color: #ffffff;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
 }
 .stats-section {
@@ -104,13 +104,13 @@ ul li a {
 }
 
 .numbers {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-family: "Futura";
     font-weight: bold;
     padding: 0;
 }
 .desc-number {
-    font-size: 20px;
+    font-size: 1.5rem;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -123,15 +123,11 @@ ul li a {
 
 .brands-section {
     background-color: black;
-    padding: 30px 5%;
-    /* display: grid;
-    grid-template-columns: 30% 15% 20% 20%;
-    align-items: center; */
-    
+    padding: 2% 5%; 
 }
 
 .brand {
-    margin: 15px;
+    margin: 1dvw;
 }
 .br1 {
     display: flex;
@@ -142,7 +138,7 @@ ul li a {
 
 .title-text {
     text-align: center;
-    font-size: 50px;
+    font-size: 3rem;
     font-family: "Lato";
     font-weight: bold;
 }
@@ -150,11 +146,11 @@ ul li a {
     margin: 0 5%;
 }
 .products-list {
-    margin-top: 80px;
+    margin-top: 10dvh;
 }
 .products-list ul {
     display: flex;
-    gap: 20px;
+    gap: 2dvw;
 }
 ul li {
     list-style-type: none;
@@ -175,20 +171,20 @@ ul li {
     height: fit-content;
 }
 .pr-name {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
     font-family: "Satoshi";
 }
 .pr-price {
-    font-size: 17px;
+    font-size:1.1rem;
     font-weight: 600;
 }
 
 .product-item {
-    border-radius: 20px;
+    border-radius:1rem;
     justify-content: center;
     align-items: center;
-    padding: 20px ;
+    padding: 3dvh 1.5dvw;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
@@ -202,7 +198,7 @@ ul li {
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.10);
     border-radius: 60px;
-    padding: 15px 50px;
+    padding: 2dvh 4dvw;
     text-decoration: none;
     color: black;
     font-size: 15px;
@@ -210,22 +206,22 @@ ul li {
 
 .feedbacks {
     display: flex;
-    margin-top: 40px;
-    
+    justify-content: space-between;
+    margin-top:5dvh;
     margin-bottom: 15%;
 }
 .feedback {
     display: inline-block;
     overflow-x: hidden;
-    padding: 30px 20px;
-    width: 400px;
-    margin: 0 10px;
+    padding:2dvw;
+    width: 22dvw;
+    margin: 0 1dvw;
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.10);
 }
 .feedback p {
     color: rgba(0, 0, 0, 0.60);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     justify-content: space-between;
 }
@@ -248,7 +244,7 @@ footer {
 
 
 .footer-item ul {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     padding: 0;
 
 }
@@ -256,15 +252,15 @@ footer {
 .title {
     color: #000;
     margin-top: 0;
-    font-size: 16px;
+    font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 3px;
     text-transform: uppercase;
 }
 .footer-item ul li {
     color: rgba(0, 0, 0, 0.60);
-    font-size: 16px;
-    padding-top: 15px;
+    font-size: 1rem;
+    padding-top: 1dvh;
     font-weight: 400;
     line-height: 19px;
 }
@@ -272,7 +268,7 @@ footer {
 .copyrights {
     color: rgba(0, 0, 0, 0.60);
     text-align: right;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 400;
     justify-content: space-around;
 }
@@ -283,19 +279,19 @@ footer {
 }
 
 .socials {
-    margin-top: 50px;
+    margin-top: 10dvh;
 }
 
 .main-shop {
     display: flex;
     gap: 2%;
-    margin-top: 50px;
+    margin-top: 5dvh;
 }
 .filters-card {
     border: solid 1px #0000002d;
     border-radius: 20px;
     background-color: #ffffff;
-    padding: 20px 15px;
+    padding: 2dvh 1.5dvw;
     width: 20%;
     height: fit-content;
 }
@@ -308,23 +304,23 @@ footer {
     height: 100%;
 }
 .medium-title {
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: bold;
     padding-bottom:30px ;
     margin-top: 0;
     margin-left: 20px;
 }
 .shop-products-list {
-    margin-bottom: 10vh;
+    margin-bottom: 10dvh;
 }
 .shop-products-list ul {
     display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(15dvw,1fr));
+  gap: 1.5dvh;
 }
 
 .page-footer {
-    margin-top: 25px;
+    margin-top: 5dvh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -334,14 +330,13 @@ footer {
     background-color: white;
     border: 1px solid black;
     border-radius: 10px;
-    padding: 10px 15px;
+    padding: 1.5dvh 1.5dvw;
     color: black;
-    font-size: 15px;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 400;
 }
 .fliter-text {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;  
 }
 .filter-detail ol {
@@ -358,16 +353,16 @@ hr {
 .filter-btn {
     background-color: black;
     color: white;
-    font-size: 14px;
+    font-size: 1rem;
     border-radius: 60px;
-    padding: 10px 0;
+    padding: 1dvh 0;
     width: 100%;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 4dvh;
 }
 .page-item {
     color: black;
     background-color: #00000050;
     border-radius: 10px;
-    padding: 10px 15px;
+    padding: 1dvh 1dvw;
 }

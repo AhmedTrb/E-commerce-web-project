@@ -6,7 +6,7 @@
 }
 
 .big-text {
-    font-size: 50px;
+    font-size: 3.5rem;
     font-family: "Satoshi";
     font-weight: bold;
     text-align: center;
@@ -17,9 +17,9 @@
     margin:0 auto;
 }
 .login-form label {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
-    padding-bottom: 30px;
+    padding-bottom: 5dvh;
 }
 form {
     margin-bottom: 5% ;
@@ -27,16 +27,16 @@ form {
 form input {
     border-radius: 10px;
     border: 1px solid rgb(0, 0, 0) ; 
-    padding: 15px ;
+    padding: 2dvh ;
 
     width: 100%;
     color: #cecece;
-    margin-bottom: 20px;
+    margin-bottom: 2dvh;
 }
 
 .login-form p {
     color: #00000056;
-    font-size: 15px;
+    font-size: 1rem;
 }
 .login-form p span {
     font-weight: bold;
@@ -52,12 +52,12 @@ form input {
 .log-btn {
     background-color: black;
     color: white;
-    font-size: 18px;
+    font-size: 1.1rem;
     border-radius: 10px;
-    padding: 15px ;
+    padding:1dvw ;
     width: 108%;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 3dvh;
 }
 .log-btn a {
     color: white;
@@ -65,3 +65,240 @@ form input {
 .log-btn a:active {
     color: white;
 }
+
+.pr-main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.product-detail-img {
+    width: 50%;
+}
+.product-info  {
+    width: 75%;
+    margin: auto;
+}
+.pr-name {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: left;
+    font-family: "Satoshi";
+}
+.rate {
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.603);
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin-bottom: 2%;
+}
+.pr-detail-price {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.price-d {
+    color: black;
+    padding-right: 6%;
+    font-size:1.5rem ;
+    font-weight: 400;
+}
+.price-bd {
+    color: rgba(0, 0, 0, 0.603);
+    font-size:1.5rem ;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+.discount p {
+    padding: 0;
+    margin: 0;
+}
+.discount {
+    background-color: rgba(255, 51, 51, 0.155);
+    padding: 2dvh ;
+    align-items: center;
+    color: #FF3333;
+    border-radius: 30px;
+    margin-left: 10%;
+}
+.product-description {
+    font-size:1rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.607);
+    line-height: 1;
+    padding: 2dvh 0;
+    width: 40dvw;
+}
+.bot {
+    display:flex;
+    gap:5%;
+    justify-content:space-between;
+    margin-top:4dvh;
+}
+.quantiy {
+    background-color: #F0F0F0;
+    border-radius:30px ;
+    padding: 1dvh 2dvw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    color: black;
+}
+.quantiy button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+}
+.add-cart-btn {
+    background-color: black;
+    color: white;
+    font-size: 1.25rem;
+    border-radius: 30px;
+    padding:  2dvh 2dvw;
+    width: 75%;
+    text-decoration: none;
+}
+
+.cart-title {
+    font-size: 2.5rem;
+    font-weight:700 ;
+    color: black;
+}
+.cart-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1dvw;
+    
+}
+.cart-items {
+    border: solid 1px #0000002d;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: .5dvh 1dvw;
+    width: 55dvw;
+    height: fit-content;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-cart-item {
+    display: flex;
+    gap: 2dvw;
+    align-items: center;
+}
+.right-cart-item {
+    display:flex;
+    align-items: center;
+    gap: 7dvw;
+}
+
+.right-cart-item button {
+    background: none;
+    border: none;
+    height: fit-content;
+}
+.cart-quantity {
+    background-color: #F0F0F0;
+    border-radius:30px ;
+    padding: 1dvh 0.5dvw;
+    display: flex;
+    gap: 1dvw;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+.cart-quantity button {
+    font-size: 1rem;
+}
+
+.cart-summary {
+    border: solid 1px #0000002d;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 2dvh 1dvw;
+    width: 20dvw;
+}
+.cart-summary h2 {
+    margin-top: 0;
+}
+.sum {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.discount-price {
+    color: #FF3333;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.sum h5 {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.603);
+    margin: 0;
+    padding-top: 1dvh;
+}
+.sum h4 {
+    font-weight: bold;
+    margin: 0;
+    color: black;
+    font-size: 1.1rem;
+}
+.top {
+    display: flex;
+    align-items: center;
+}
+.medium-text {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 700;
+}
+.personal-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+}
+.info h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 2dvh;
+    color: rgba(0, 0, 0, 0.626);
+}
+.info-details h3{
+    margin: 2dvh;
+    color: black;
+    font-size: 1.2rem;
+}
+
+table thead tr td {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 2dvh 0;
+
+}
+table {
+    border-collapse: collapse;
+}
+table tbody tr {
+    border-top: 1px solid rgba(0, 0, 0, 0.612);
+    margin: 1dvh;
+}
+table tbody td {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+table .pr-i {
+    height: 4dvh;
+    padding: 2dvh 0;
+    
+}
+
+
+

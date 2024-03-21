@@ -24,7 +24,7 @@
         </div>
         <div class="icons">
             <div class="icon"><a href="signinPage.php"><img src="assets/profile.svg" height="25px"/></a></div>
-            <div class="icon"><a href=""><img src="assets/cart.svg" height="25px"/></a></div>
+            <div class="icon"><a href="cartPage.php"><img src="assets/cart.svg" height="25px"/></a></div>
         </div>
     </header>
 
@@ -124,6 +124,22 @@
                 </div>
                 <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
             </div>
+            <div class="feedback">
+                <div><img src="assets/rating.png" alt="rating"/></div>
+                <div style="display: flex;align-items: center;">
+                    <h3>Sarah M.</h3>
+                    <img src="assets/check.png" alt="" height="20px"/>
+                </div>
+                <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+            </div>
+            <div class="feedback">
+                <div><img src="assets/rating.png" alt="rating"/></div>
+                <div style="display: flex;align-items: center;">
+                    <h3>Sarah M.</h3>
+                    <img src="assets/check.png" alt="" height="20px"/>
+                </div>
+                <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+            </div>
         </div>
     </section>
 
@@ -134,7 +150,7 @@
             <div class="footer-item">
                 <img src="assets/SetUpSprint.svg" slt="logo" />
                 <p>We have clothes that suits your style<br> and which you're proud to wear.<br> From women to men.</p>
-                <div class="socials"><img src="assets/Social.svg" alt="socials"/></div>
+                <div class="socials"><a href="https://github.com/AhmedTrb/E-commerce-Website"><img src="assets/Social.svg" alt="socials"/></a></div>
             </div>
             <div class="footer-item">
                 <p class="title">Company</p>
