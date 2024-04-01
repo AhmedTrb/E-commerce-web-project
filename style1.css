@@ -10,7 +10,7 @@
     font-family: "Satoshi";
     font-weight: bold;
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 3dvh;
 }
 
 .login-form {
@@ -19,16 +19,13 @@
 .login-form label {
     font-size: 1.25rem;
     font-weight: bold;
-    padding-bottom: 5dvh;
+    display: block;
 }
-form {
-    margin-bottom: 5% ;
-}
+
 form input {
     border-radius: 10px;
     border: 1px solid rgb(0, 0, 0) ; 
     padding: 2dvh ;
-
     width: 100%;
     color: #cecece;
     margin-bottom: 2dvh;
@@ -43,6 +40,7 @@ form input {
     color: black;
     text-decoration: underline;
 }
+
 .login-form p span a {
     color: black;
 }

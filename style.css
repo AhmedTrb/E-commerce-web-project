@@ -149,11 +149,13 @@ ul li a {
     margin-top: 10dvh;
 }
 .products-list ul {
-    display: flex;
-    gap: 2dvw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15dvw,1fr));
+    gap: 1.5dvw;
 }
 ul li {
     list-style-type: none;
+    display: block;
 }
 .products-list ul li,.shop-products-list ul li {
     display: inline-block;

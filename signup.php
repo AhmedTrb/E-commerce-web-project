@@ -1,0 +1,23 @@
+<?php 
+if (isset($_POST["firstname"]) && isset($_POST["lastname"]) && isset($_POST["phone"]) && isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirmpassword"]) && $_POST["password"]==$_POST["confirmpassword"]){
+    $firstname = $_POST["firstname"];
+    $lastname = $_POST["lastname"];
+    $phonenumber = $_POST["phone"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    include "database.php";
+
+    $stmt = $connect->prepare("SELECT * FROM Clients WHERE FirstName = ? AND Email = ?");
+    $stmt->execute([$username,$email]);
+    $user = $stmt->fetch();
+
+    if ($user) {
+        echo "<script>alert('user already exists in database')</script>";
+    } else {
+        
+        $stmt = $connect->prepare("INSERT INTO Clients (FirstName,LastName,Email,PasswordHash,Address,PhoneNumber) VALUES (?, ? , ?, ? ,? ,?)");
+        $stmt->execute([$firstname, $lastname,$email,$password,"",$phonenumber]);
+        header("Location:signinPage.php");
+    }
+}
