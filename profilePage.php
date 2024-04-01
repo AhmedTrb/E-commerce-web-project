@@ -1,3 +1,5 @@
+<?php session_start() ;?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,13 +20,14 @@
                     <ul>
                         <li><a href="homePage.php">Home</a></li>
                         <li><a href="shop.php">Shop</a></li>
-                        <li><a href="">Brands</a></li>
+                        <li><a href="brandsPage.php">Brands</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="icons">
-                <div class="icon"><a href="signinPage.php"><img src="assets/profile.svg" height="25px"/></a></div>
+            <div class='icon'><a href='login.php'><img src='assets/profile.svg' height='25px'/></a></div>
                 <div class="icon"><a href="cartPage.php"><img src="assets/cart.svg" height="25px"/></a></div>
+                <div class='logout-btn'><a href="logout.php">Logout</a></div>
             </div>
         </header>
         
@@ -34,7 +37,10 @@
         <section class="container">
             <div class="top">
                 <h1 class="cart-title" style="margin-right:35%;">Profile</h1>
-                <h1 class="cart-title">Welcome Back User !</h1>
+                <?php
+                
+                echo "<h1 class='cart-title'>Welcome Back " .$_SESSION["userFname"]. "!</h1>" ;
+                ?>
             </div>
             <hr>
             <div>
@@ -48,10 +54,13 @@
                         <h4>Default Adress :</h4>
                     </div>
                     <div class="info-details">
-                        <h3>Test Name</h3>
-                        <h3>testshop12@gmail.com</h3>
-                        <h3>998877220</h3>
-                        <h3>99 Saxon Street Hammonton, NJ 08037</h3>
+                        <?php
+                            echo "<h3>" .$_SESSION["userFname"]. "</h3>" ;
+                            echo "<h3>" .$_SESSION["userLname"]. "</h3>" ;
+                            echo "<h3>" .$_SESSION["phone"]. "</h3>" ;
+                            echo "<h3>" .$_SESSION["address"]. "</h3>" ;
+                        ?>
+                        
                     </div>
                 </div>
             </div>

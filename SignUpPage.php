@@ -18,17 +18,17 @@
 
             <label>Name</label>
             <form>
-                <input type="text" placeholder="Name" >
+                <input type="text" placeholder="Name" required>
             </form>
             <label>Email</label>
             <form>
-                <input type="email" placeholder="Email" >
+                <input type="email" placeholder="Email" required>
             </form>
 
             <label>Password</label>
             <form>
-                <input type="password" placeholder="password" >
-                <input type="password" placeholder="Confirm password">
+                <input type="password" placeholder="password" required>
+                <input type="password" placeholder="Confirm password" required>
             </form>
 
             <p>By signing up I agree to the  <span><a href="">Terms & conditions</a></span></p>

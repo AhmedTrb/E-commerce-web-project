@@ -300,5 +300,45 @@ table .pr-i {
     
 }
 
+.error {
+    background-color: #ff333389;
+    color: red;
+}
 
+.brands-list {
+    margin: 5dvh 4dvw;
+    display: grid;
+    gap: 0 1.5dvw;
+    grid-template-columns: repeat(auto-fill, minmax(14dvw, 1fr));
+    grid-template-rows: auto;
+    
+}
 
+.brand-item {
+    width: 27dvh;
+    height: 27dvh;
+    padding: 2dvh;
+    margin-top: 5dvh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.217) 0px 8px 24px;
+}
+.brand-img {
+    width:5dvw;
+    height:5dvh ;
+}
+.logout-btn {
+    background-color: black;
+    padding: 1dvh 2dvw;
+    color: white;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+.logout-btn a {
+    color: white;
+}
+.logout-btn a:active {
+    color: white;
+}

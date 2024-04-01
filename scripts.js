@@ -33,8 +33,3 @@ window.onload = function() {
     startCounter(counter3Config.element, counter3Config.targetNumber, counter3Config.duration);
 };
 
-
-document.addEventListener('DOMContentLoaded', function () {
-    const contentElement = document.getElementsById('fade');
-    contentElement.style.opacity = '1';
-});

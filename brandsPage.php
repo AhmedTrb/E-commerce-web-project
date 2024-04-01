@@ -32,53 +32,16 @@
         </header>
         
         <!-- ---------------------------------------------------------------------------------------------------- -->
-        <section class="container">
-            <h1 class="cart-title">Your Cart</h1>
-            <div class="cart-container">
-                <div class="cart-items">
-                    <div class="cart-item">
-                        <div class="left-cart-item">
-                            <div><img src="assets/ryenCPU.png" width="80dvw" height="80dvh"></div>
-                            <div class="cart-item-info">
-                                <h2>Product Name</h2>
-                                <h2>$399,9</h2>
-                            </div>
-                        </div>
-                        <div class="right-cart-item">
-                            <div class="cart-quantity">
-                                <button onclick='decreaseQuantity("qt")'>-</button>
-                                <div id="qt">1</div>
-                                <button onclick='increaseQuantity("qt")'>+</button>
-                            </div>
-                            
-                            <button><img src="assets/trash.svg"></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-summary">
-                    <h2>Order Summary</h2>
-                    <hr>
-                    <div class="sum">
-                        <h5>Subtotal</h5>
-                        <h4>$450</h4>
-                    </div>
-                    <div class="sum">
-                        <h5>Discount (-20%)</h5>
-                        <div class="discount-price">-$30</div>
-                    </div>
-                    <div class="sum">
-                        <h5>Delivery Fee</h5>
-                        <h4 >$15</h4>
-                    </div>
-                    <hr>
-                    <div class="sum">
-                        <h5>Total</h5>
-                        <h4>$445</h4>
-                    </div>
-                    <button class="filter-btn">Go to Chekout <img src="assets/right-arrow.svg" color="white"></button>
-                </div>
-                
-            </div>
+        
+
+        <section class="brands-list">
+            <?php
+
+            for ($i=0;$i<12;$i++) 
+                echo"<div class='brand-item'>
+                        <img class='brand-img' src='assets/RAM.png'>
+                    </div>" ;
+            ?>
         </section>
 
         <!-- Footer -->

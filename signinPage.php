@@ -1,3 +1,7 @@
+<?php 
+    include ('database.php' );
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,26 +12,29 @@
         <link rel="stylesheet" href="style1.css">
 
         <link rel="icon" href="assets/SetUpSprint.svg" type="image/icon type">
-        <script src="scripts.js"></script>
+        
     </head>
 <body>
+    
     <section style="display:flex;align-items:center;">
         <div class="left-image"></div>
         <div class="login-form">
             <h1 class="big-text">Welcome Back !</h1>
 
             <label>Email</label>
-            <form>
-                <input type="email" placeholder="email">
-            </form>
-            <label>Password</label>
-            <form>
-                <input type="password" placeholder="password">
-            </form>
+            <form action="login.php" method="POST" name="form">
+                <input type="email" placeholder="email" name="email" required>
+            
+                <label>Password</label>
+            
+                <input type="password" placeholder="password" name="password" required>
+            
 
-            <p>Don't have an account yet <span><a href="SignUpPage.php">Sign up</a></span></p>
-
-            <button class="log-btn" href=""><a href="homePage.php">Log In</a></button>
+                <p>Don't have an account yet <span><a href="SignUpPage.php">Sign up</a></span></p>
+            
+                <input class="log-btn" type="submit" name="login" value="Login">
+            </form>
+            
         </div>
     </section>
 </body>

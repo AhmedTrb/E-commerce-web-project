@@ -1,3 +1,4 @@
+<?php session_start() ;?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +8,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="style1.css">
         <link rel="icon" href="assets/SetUpSprint.svg" type="image/icon type">
-        <script src="scripts.js"></script>
+        <script src="sripts.js"></script>
     </head>
     <body>
         <!-- Header -->
@@ -23,7 +24,7 @@
                 </nav>
             </div>
             <div class="icons">
-                <div class="icon"><a href="signinPage.php"><img src="assets/profile.svg" height="25px"/></a></div>
+                <div class='icon'><a href='login.php'><img src='assets/profile.svg' height='25px'/></a></div>
                 <div class="icon"><a href=""><img src="assets/cart.svg" height="25px"/></a></div>
             </div>
         </header>
@@ -54,15 +55,16 @@
                 <hr>
                 <div class="bot">
                     <div class="quantiy">
-                        <button>-</button>
-                        <div id="qt">1</div>
-                        <button>+</button>
+                        <button onclick="decreaseQuantity('Q')">-</button>
+                        <div id="Q">1</div>
+                        <button onclick="increaseQuantity('Q')">+</button>
                     </div>
-                    <button class="add-cart-btn">Add to Cart</button>
+                    <button class="add-cart-btn" type="submit">Add to Cart</button>
                 </div>
             </div>
         </section>
 
+        
 
         <!-- Footer -->
 
@@ -109,5 +111,6 @@
                 </div> 
             </div>
         </footer>
+        <script src="script2.js"></script>
 </body>
 </html>
