@@ -1,0 +1,62 @@
+.check-out-title {
+    font-size: 2.5rem;
+    font-weight:300 ;
+    color: black;
+}
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1dvw;
+    
+}
+.check-form {
+    border: solid 1px #0000002d;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 3dvh 4dvw;
+    width: 50dvw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+
+}
+.purchasing-btn {
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    border-radius: 60px;
+    padding: 1dvh 0;
+    width: 100%;
+    text-decoration: none;
+    margin-top: 4dvh;
+    height:50px;
+    cursor:pointer;
+}
+
+.formm{
+    border-radius: 10px;
+    border: 3px solid rgb(0, 0, 0) ; 
+    padding: 2dvh ;
+    color: #cecece;
+    margin-bottom: 2dvh;
+    letter-spacing: 2px;
+}
+.formm-label {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-bottom: 3dvh;
+    display:block;
+}
+.visa-img{
+    height: 38px;
+    width: 165;
+    transform: translate(505%,305%);
+}
+.cartt-summary {
+    border: solid 1px #0000002d;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 2dvh 1dvw;
+    width: 20dvw;
+    height: 200PX;
+}
