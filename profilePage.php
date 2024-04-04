@@ -12,27 +12,7 @@
         <script src="scripts.js"></script>
     </head>
     <body>
-        <!-- Header -->
-        <header>
-            <div class="left">
-                <div class="logo"><img src="assets/SetUpSprint.svg" alt="logo" height="30px"/></div>
-                <nav>
-                    <ul>
-                        <li><a href="homePage.php">Home</a></li>
-                        <li><a href="shop.php">Shop</a></li>
-                        <li><a href="brandsPage.php">Brands</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="icons">
-            <div class='icon'><a href='login.php'><img src='assets/profile.svg' height='25px'/></a></div>
-                <div class="icon"><a href="cartPage.php"><img src="assets/cart.svg" height="25px"/></a></div>
-                <div class='logout-btn'><a href="logout.php">Logout</a></div>
-            </div>
-        </header>
-        
-        <!-- ---------------------------------------------------------------------------------------------------- -->
-        
+    <?php include "header.php" ?>
 
         <section class="container">
             <div class="top">
@@ -60,14 +40,14 @@
                             echo "<h3>" .$_SESSION["phone"]. "</h3>" ;
                             echo "<h3>" .$_SESSION["address"]. "</h3>" ;
                         ?>
-                        
                     </div>
                 </div>
             </div>
             <!-- ---------------------------------------------------------------------------- -->
+            
             <!-- Table displaying all the past purshases of the user -->
             <div class="past-purshase">
-                <h2 class="medium-text">Past Purshases :</h2>
+                <h2 class="medium-text">Previous Orders:</h2>
                 <table width="100%">
                     <thead>
                         <tr>
@@ -80,89 +60,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        include "database.php" ; 
-
-                            // selecting all orders for the current user
-                            $sql = "SELECT * FROM Orders WHERE ClientID = ?" ;
-                            $stm = $connect->prepare($sql);
-                            $stm->execute([$_SESSION['ClientID']]);
-                            $orders = $stm->fetchAll(PDO::FETCH_ASSOC);
-
-                            foreach ($orders as $order) {
-
-                                $query = "SELECT P.ProductName ,P.ImageURl,OD.Subtotal,OD.Quantity FROM OrderDetail AS OD, Product AS P WHERE OrderID = ? AND P.ProductID = OD.ProductID";
-                                $stt = $connect->prepare($query);
-                                $stt->execute([$order['OrderID']]);
-                                $products = $stt->fetchAll(PDO::FETCH_ASSOC);
-
-                                foreach($products as $product){ ?>
-                                    <tr>
-                                        <td class="pr-i"><img src="<?php echo $product['ImageURl']?>" width="80dvw" height="70dvh"></td>
-                                        <td><?php echo $product['ProductName']?></td>
-                                        <td><?php echo $product['Quantity']?></td>
-                                        <td><?php echo $product['Subtotal']?> DT</td>
-                                        <td><?php echo $order['OrderDate']?></td>
-                                        <td><?php echo $order['OrderStatus']?></td>
-                                    </tr>
-                               <?php } ?>
-                                    <tr class="line">
-                                        <td>Total : </td>
-                                        <td><?php echo $order['TotalAmount']?> DT</td>
-                                    </tr>
-                           <?php }?>
-                        
-                        
+                        <?php include "profilePastOrdersLoader.php"; ?>
                     </tbody>
                 </table>
             </div>
             <!-- --------------------------------------------------------------------------------------- -->
         </section>
 
-        <!-- Footer -->
-
-        <footer>
-            <div class="footer-container">
-                <div class="footer-item">
-                    <img src="assets/SetUpSprint.svg" alt="logo" />
-                    <p>We have clothes that suits your style<br> and which you're proud to wear.<br> From women to men.</p>
-                    <div class="socials"><a href="https://github.com/AhmedTrb/E-commerce-Website"><img src="assets/Social.svg" alt="socials"/></a></div>
-                </div>
-                <div class="footer-item">
-                    <p class="title">Company</p>
-                    <ul>
-                        <li>About</li>
-                        <li>Features</li>
-                        <li>Works</li>
-                        <li>Career</li>
-                    </ul>
-                </div>
-                <div class="footer-item">
-                    <p class="title">Help</p>
-                    <ul>
-                        <li>Costumer Support</li>
-                        <li>Delivery Details</li>
-                        <li>Terms & Conditions</li>
-                        <li>Privacy Policy</li>
-                    </ul>
-                </div>
-                <div class="footer-item">
-                    <p class="title">FAQ</p>
-                    <ul>
-                        <li>Account</li>
-                        <li>Manage Deliveries</li>
-                        <li>Orders</li>
-                        <li>Payments</li>
-                    </ul>
-                </div>
-            </div>
-            <hr style="width: 90%;">
-            <div class="flex-items">
-                <p class="copyrights" >Shop.co © 2000-2023, All Rights Reserved</p>
-                <div class="flex">
-                    <img src="assets/visa.svg" alt="visa"/>
-                </div> 
-            </div>
-        </footer>
+        <?php include "footer.php" ?>
 </body>
 </html>

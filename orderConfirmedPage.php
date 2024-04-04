@@ -41,9 +41,9 @@
         <footer>
             <div class="footer-container">
                 <div class="footer-item">
-                 <img src="assets/SetUpSprint.svg" alt="logo" />
-                    <p>We have clothes that suits your style<br> and which you're proud to wear.<br> From women to men.</p>
-                    <div class="socials"><a href="https://github.com/AhmedTrb/E-commerce-Website"><img src="assets/Social.svg" alt="socials"/></a></div>
+                    <img src="assets/SetUpSprint.svg" alt="logo" />
+                    <p>Elevate your PC setup with precision.<br> Discover top-tier components tailored<br> to your needs.Build your dream<br> rig with SetupSprint.</p>
+                    <div class="socials"><a href="https://github.com/AhmedTrb/E-commerce-web-project"><img src="assets/Social.svg" alt="socials"/></a></div>
                 </div>
                 <div class="footer-item">
                     <p class="title">Company</p>

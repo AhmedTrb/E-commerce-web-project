@@ -9,25 +9,9 @@
         <script src="scripts.js"></script>
     </head>
     <body>
-        <!-- Header -->
-        <header>
-            <div class="left">
-                <div class="logo"><img src="assets/SetUpSprint.svg" alt="logo" height="30px"/></div>
-                <nav>
-                    <ul>
-                        <li><a href="homePage.php">Home</a></li>
-                        <li><a href="shop.php">Shop</a></li>
-                        <li><a href="brandsPage.php">Brands</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="icons">
-                <div class='icon'><a href='login.php'><img src='assets/profile.svg' height='25px'/></a></div>
-                <div class="icon"><a href="cartPage.php"><img src="assets/cart.svg" height="25px"/></a></div>
-            </div>
-        </header>
-        
-        <!-- ---------------------------------------------------------------------------------------------------- -->
+
+    <?php include "header.php" ?>
+
         <!-- SHOP -->
         <section class="container main-shop">
             <!-- Filter Products -->
@@ -102,52 +86,28 @@
                         <h2 class="medium-title">Shop</h2>
                     </div>
                     <ul>
-                        <?php 
-                            include_once "database.php" ;
-
-                            $prod_per_page = 12 ;
-                            if (isset($_GET["page"])) {
-                                $page = $_GET['page'];
-                            } else $page=1;
-
-                            $start_from = ($page-1)*$prod_per_page ;
-                            
-                            $quer = "SELECT * FROM product LIMIT $start_from , $prod_per_page";
-                            $stm = $connect->query($quer) ;
-                            $result = $stm->fetchAll(PDO::FETCH_ASSOC);
-
-                            foreach($result as $row) {
-                                $url = $row["ImageURL"] ;
-                        ?>
-                        <li><a href="productDetailPage.php?ID=<?php echo"$row[ProductID]"?>" >
-                            <div class="product-item">
-                                <div><img src="<?php echo $url ?>" alt="product" class="prd-img"/></div>
-                                <p class="pr-name"><?php echo $row["ProductName"] ?></p>
-                                <img src="assets/rating.svg" alt="rating">
-                                <p class="pr-price"><?php echo $row["OldPrice"] ?> DT</p>  
-                            </div>
-                        </a></li>
-
-                        <?php } ?>
+                        <!-- loading products -->
+                        <?php include "shopProductLoader.php" ?>
                     </ul>
                 </div>
                 <hr style="width: 90%;">
 
                 <!-- Pages footer -->
                 <div class="page-footer">
-                <?php  
+                    <!-- previous button -->
+                    <?php  
                         if (isset($_GET["page"])) {
                                 $page = $_GET['page'];
-                            } else $page=1;
+                        } else $page=1;
                         if ($page>1) $page--;
+
                         echo"<a class='btn-p' href='shop.php?page=".$page."'>"; ?>
                             <div style="display:flex;justify-content:space-between;align-items:center;gap:1dvw">
                                 <img src="assets/left-arrow.svg"><div>Previous</div>
                             </div>
                         </a>
+                    <!-- displaying page items -->
                     <?php
-                        
-
                         $prod_per_page = 12 ;
                         $sql = "SELECT COUNT(ProductID) AS total FROM product";
                         $stm = $connect->query($sql) ;
@@ -173,6 +133,7 @@
                             }
                             ?>
                         </div>
+                    <!-- Next button -->
                     <?php  
                     if (isset($_GET["page"])) {
                             $page = $_GET['page'];
@@ -181,58 +142,12 @@
                     echo"<a class='btn-p' href='shop.php?page=".$page."'>"; ?>
                         <div style="display:flex;justify-content:space-between;align-items:center;gap:1dvw">
                             <div>Next</div><img src="assets/right-arrow.svg"> 
-                        </div>
-                         
+                        </div>  
                     </a>
                 </div>
             </div>
         </section>
 
-    <!-- Footer -->
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-item">
-                <img src="assets/SetUpSprint.svg" slt="logo" />
-                <p>We have clothes that suits your style<br> and which you're proud to wear.<br> From women to men.</p>
-                <div class="socials"><a href="https://github.com/AhmedTrb/E-commerce-Website"><img src="assets/Social.svg" alt="socials"/></a></div>
-            </div>
-            <div class="footer-item">
-                <p class="title">Company</p>
-                <ul>
-                    <li>About</li>
-                    <li>Features</li>
-                    <li>Works</li>
-                    <li>Career</li>
-                </ul>
-            </div>
-            <div class="footer-item">
-                <p class="title">Help</p>
-                <ul>
-                    <li>Costumer Support</li>
-                    <li>Delivery Details</li>
-                    <li>Terms & Conditions</li>
-                    <li>Privacy Policy</li>
-                </ul>
-            </div>
-            <div class="footer-item">
-                <p class="title">FAQ</p>
-                <ul>
-                    <li>Account</li>
-                    <li>Manage Deliveries</li>
-                    <li>Orders</li>
-                    <li>Payments</li>
-                </ul>
-            </div>
-        </div>
-        <hr style="width: 90%;">
-        <div class="flex-items">
-            <p class="copyrights" >Shop.co © 2000-2023, All Rights Reserved</p>
-            <div class="flex">
-                <img src="assets/visa.svg" alt="visa"/>
-            </div> 
-        </div>
-    </footer>
-    <script href="script2.js"></script>
+    <?php include "footer.php" ?>
 </body>
 </html>
