@@ -45,6 +45,7 @@
                         $subtotal = 7.00;
                         $discounted =0.00 ;
                         $before_discount = 0.00;
+                        $per=0;
                         if (isset($_SESSION['cart'])){
                             $array_to_question_marks = implode(',', array_fill(0, count($products_in_cart), '?')); // (?,?,?,? ...) for the sql query
                             $stmt = $connect->prepare('SELECT * FROM product WHERE ProductID IN (' . $array_to_question_marks . ')');
@@ -52,7 +53,7 @@
                             $stmt->execute(array_keys($products_in_cart));
 
                             $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                            
+
                             foreach ($products as $product) {
                                 $ID = $product['ProductID'];
                                 $before_discount+=$product['OldPrice']*(int)$products_in_cart[$ID] ;
@@ -83,9 +84,8 @@
                     <?php } 
                         $_SESSION['total-bd'] = $before_discount ;
                         $_SESSION['ds'] = $discounted ;
-                        $per = ($subtotal / $before_discount)*100 ;
-                        if ($per<0 && $per>100) $per=0;
-                        $_SESSION['per'] = $per ;
+                        $per = ($discounted / $before_discount)*100 ;
+                        $_SESSION['per'] = $per;
                         $_SESSION['total'] = $subtotal ;
                     } else echo "<h1>Cart Empty</h1>" ?>
                 </div>
@@ -97,7 +97,7 @@
                         <h4><?php echo $before_discount ?> DT</h4>
                     </div>
                     <div class="sum">
-                        <h5>-<?php echo($_SESSION['per']>100)?0:$_SESSION['per']?>%</h5>
+                        <h5>-<?php echo($per>100)?0:$per?>%</h5>
                         <div class="discount-price">-<?php echo $discounted ?> DT</div>
                     </div>
                     <div class="sum">
@@ -117,8 +117,11 @@
             </div>
         </section>
 
-        <!-- Footer -->
 
+
+
+
+        <!-- Footer -->
         <footer>
             <div class="footer-container">
                 <div class="footer-item">
