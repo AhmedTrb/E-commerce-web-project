@@ -1,14 +1,17 @@
 function increaseQuantity(id){
     let elem = document.getElementById(id);
-    let quantity = parseInt(elem.textContent);
+    let quantity = parseInt(elem.value);
+    console.log(quantity);
     quantity++;
-    elem.textContent = quantity.toString() ;
+    elem.value = quantity.toString() ;
 }
+
+
 function decreaseQuantity(id){
     let elem = document.getElementById(id);
-    let quantity = parseInt(elem.textContent);
+    let quantity = parseInt(elem.value);
     if (quantity>1) {
         quantity--;
-        elem.textContent = quantity.toString() ;
+        elem.value = quantity.toString() ;
     }
 }

@@ -1,4 +1,3 @@
-<?php session_start() ;?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -38,31 +37,61 @@
                     <img src="assets/filter.svg">
                 </div>
                 <hr>
+                <!-- applied filters -->
                 <div class="filter-detail">
-                    <ol>
-                        <li>GPU</li>
-                        <li>CPU</li>
-                        <li>Intel</li>
-                    </ol>
+                        <label class="main">CPU
+                            <input type="checkbox">
+                            <span class="checkbox-container"></span>
+                        </label>
+                        <label class="main">GPU
+                            <input type="checkbox">
+                            <span class="checkbox-container"></span>
+                        </label>
+                        <label class="main">Intel
+                            <input type="checkbox">
+                            <span class="checkbox-container"></span>
+                        </label> 
                 </div>
+                <!-- brand filter -->
                 <h2 class="fliter-text">Brands</h2>
                 <hr>
                 <div class="filter-detail">
-                    <ol>
-                        <li>Intel</li>
-                        <li>Intel</li>
-                        <li>Intel</li>
-                        <li>Intel</li>
-                        <li>Intel</li>
-                    </ol>
+                    <label class="main">Intel
+                        <input type="checkbox">
+                        <span class="checkbox-container"></span>
+                    </label>
+                    <label class="main">Red Dragon
+                        <input type="checkbox">
+                        <span class="checkbox-container"></span>
+                    </label>
+                    <label class="main">AMD
+                        <input type="checkbox">
+                        <span class="checkbox-container"></span>
+                    </label>
                 </div>
-                <h2 class="fliter-text">Price</h2>
+                <!-- category filter -->
+                <h2 class="fliter-text">Categories</h2>
                 <hr>
-                <div class="slider-track"></div>
-                    <input type="range" min="0" max="100" value="30" id="slider-1" oninput="slideOne()">
-                    <input type="range" min="0" max="100" value="70" id="slider-2" oninput="slideTwo()">
+                <div class="filter-detail">
+                    <form>
+                        <label class="main">Mouse
+                            <input type="checkbox">
+                            <span class="checkbox-container"></span>
+                        </label>
+                        <label class="main">CPU
+                            <input type="checkbox">
+                            <span class="checkbox-container"></span>
+                        </label>
+                        <label class="main">GPU
+                            <input type="checkbox">
+                            <span class="checkbox-container"></span>
+                        </label>
+                    </form>
+                </div>
+                
+                
                 <hr>
-                <button class="filter-btn">Aplly Filters</button>
+                <input class="filter-btn" value="Apply filters" type="submit">
 
             </div>
 
@@ -73,25 +102,88 @@
                         <h2 class="medium-title">Shop</h2>
                     </div>
                     <ul>
-                        <?php include 'ProductsBuilder.php' ?>
+                        <?php 
+                            include_once "database.php" ;
+
+                            $prod_per_page = 12 ;
+                            if (isset($_GET["page"])) {
+                                $page = $_GET['page'];
+                            } else $page=1;
+
+                            $start_from = ($page-1)*$prod_per_page ;
+                            
+                            $quer = "SELECT * FROM product LIMIT $start_from , $prod_per_page";
+                            $stm = $connect->query($quer) ;
+                            $result = $stm->fetchAll(PDO::FETCH_ASSOC);
+
+                            foreach($result as $row) {
+                                $url = $row["ImageURL"] ;
+                        ?>
+                        <li><a href="productDetailPage.php?ID=<?php echo"$row[ProductID]"?>" >
+                            <div class="product-item">
+                                <div><img src="<?php echo $url ?>" alt="product" class="prd-img"/></div>
+                                <p class="pr-name"><?php echo $row["ProductName"] ?></p>
+                                <img src="assets/rating.svg" alt="rating">
+                                <p class="pr-price"><?php echo $row["OldPrice"] ?> DT</p>  
+                            </div>
+                        </a></li>
+
+                        <?php } ?>
                     </ul>
                 </div>
                 <hr style="width: 90%;">
 
                 <!-- Pages footer -->
                 <div class="page-footer">
-                    <button class="btn-p"><img src="assets/left-arrow.svg">Previous</button>
+                <?php  
+                        if (isset($_GET["page"])) {
+                                $page = $_GET['page'];
+                            } else $page=1;
+                        if ($page>1) $page--;
+                        echo"<a class='btn-p' href='shop.php?page=".$page."'>"; ?>
+                            <div style="display:flex;justify-content:space-between;align-items:center;gap:1dvw">
+                                <img src="assets/left-arrow.svg"><div>Previous</div>
+                            </div>
+                        </a>
+                    <?php
+                        
 
-                    <div class="pages">
-                        <div class="page-item">1</div>
-                    </div>
-
-                    <button class="btn-p">
-                        <div style="display:flex;justify-content:space-between;align-items:center;">
-                        <div>Next</div><img src="assets/right-arrow.svg"> 
+                        $prod_per_page = 12 ;
+                        $sql = "SELECT COUNT(ProductID) AS total FROM product";
+                        $stm = $connect->query($sql) ;
+                        $row = $stm->fetch(PDO::FETCH_ASSOC);
+                                
+                        $total_pages = ceil($row["total"] / $prod_per_page);
+                        ?>
+                        <div class="pages">
+                            <?php
+                            if ($total_pages>15){
+                                for ($i=1;$i<=$total_pages;$i++){
+                                    if ($i <= 4 || (($i==$page || $i==$page-1 || $i==$page+1) && $i>4 && $i<=$total_pages-3) ||$i>= $total_pages - 3) {
+                                        echo "<a href='shop.php?page=" .$i."'>";
+                                        echo "<div " . (($i == $page) ? " class='curPage'" : " class='nrml-page'").">" . $i . "</div>";
+                                        echo "</a> ";
+                                    }
+                                    else echo ".";
+                                } 
+                            } else {
+                                for ($i=1;$i<=$total_pages;$i++){
+                                    echo "<div class='page-item'>".$i."</div>" ;
+                                } 
+                            }
+                            ?>
+                        </div>
+                    <?php  
+                    if (isset($_GET["page"])) {
+                            $page = $_GET['page'];
+                        } else $page=1;
+                    if ($page<$total_pages) $page++;
+                    echo"<a class='btn-p' href='shop.php?page=".$page."'>"; ?>
+                        <div style="display:flex;justify-content:space-between;align-items:center;gap:1dvw">
+                            <div>Next</div><img src="assets/right-arrow.svg"> 
                         </div>
                          
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -141,5 +233,6 @@
             </div> 
         </div>
     </footer>
+    <script href="script2.js"></script>
 </body>
 </html>

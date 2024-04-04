@@ -74,28 +74,44 @@
                             <td></td>
                             <td>Product</td>
                             <td>Qte</td>
-                            <td>Price</td>
+                            <td>Total</td>
                             <td>Date</td>
                             <td>Status</td>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="pr-i"><img src="assets/RAM.png"></td>
-                            <td>Corsair Vengeance RGB Pro 16GB</td>
-                            <td>2</td>
-                            <td>$260</td>
-                            <td>12/08/2023</td>
-                            <td>Delivered</td>
-                        </tr>
-                        <tr>
-                            <td class="pr-i"><img src="assets/RAM.png"></td>
-                            <td>Corsair Vengeance RGB Pro 16GB</td>
-                            <td>2</td>
-                            <td>$260</td>
-                            <td>12/08/2023</td>
-                            <td>Delivered</td>
-                        </tr>
+                        <?php
+                        include "database.php" ; 
+
+                            // selecting all orders for the current user
+                            $sql = "SELECT * FROM Orders WHERE ClientID = ?" ;
+                            $stm = $connect->prepare($sql);
+                            $stm->execute([$_SESSION['ClientID']]);
+                            $orders = $stm->fetchAll(PDO::FETCH_ASSOC);
+
+                            foreach ($orders as $order) {
+
+                                $query = "SELECT P.ProductName ,P.ImageURl,OD.Subtotal,OD.Quantity FROM OrderDetail AS OD, Product AS P WHERE OrderID = ? AND P.ProductID = OD.ProductID";
+                                $stt = $connect->prepare($query);
+                                $stt->execute([$order['OrderID']]);
+                                $products = $stt->fetchAll(PDO::FETCH_ASSOC);
+
+                                foreach($products as $product){ ?>
+                                    <tr>
+                                        <td class="pr-i"><img src="<?php echo $product['ImageURl']?>" width="80dvw" height="70dvh"></td>
+                                        <td><?php echo $product['ProductName']?></td>
+                                        <td><?php echo $product['Quantity']?></td>
+                                        <td><?php echo $product['Subtotal']?> DT</td>
+                                        <td><?php echo $order['OrderDate']?></td>
+                                        <td><?php echo $order['OrderStatus']?></td>
+                                    </tr>
+                               <?php } ?>
+                                    <tr class="line">
+                                        <td>Total : </td>
+                                        <td><?php echo $order['TotalAmount']?> DT</td>
+                                    </tr>
+                           <?php }?>
+                        
                         
                     </tbody>
                 </table>

@@ -100,12 +100,12 @@ form input {
     color: black;
     padding-right: 6%;
     font-size:1.5rem ;
-    font-weight: 400;
+    font-weight: bold;
 }
 .price-bd {
     color: rgba(0, 0, 0, 0.603);
     font-size:1.5rem ;
-    font-weight: 400;
+    font-weight: 600;
     text-decoration: line-through;
 }
 .discount p {
@@ -137,25 +137,46 @@ form input {
 .quantiy {
     background-color: #F0F0F0;
     border-radius:30px ;
-    padding: 1dvh 2dvw;
+    padding: 0 2dvw;
+    height: 7dvh;
     display: flex;
+    gap: 1dvw;
     justify-content: space-between;
     align-items: center;
     width: 20%;
     color: black;
 }
+.quantiy form {
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.quantiy form input :focus {
+    outline: none;
+}
+.quantiy form input {
+    margin: 0;
+    width: 3dvw;
+    box-sizing: border-box;
+    color: black;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+}
 .quantiy button {
     background: none;
     border: none;
+    cursor: pointer;
     font-size: 1.5rem;
 }
 .add-cart-btn {
     background-color: black;
     color: white;
+    border: none;
+    cursor: pointer;
     font-size: 1.25rem;
     border-radius: 30px;
-    padding:  2dvh 2dvw;
-    width: 75%;
+    width: 38dvw;
     text-decoration: none;
 }
 
@@ -183,6 +204,7 @@ form input {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-top: 1px solid #0000002d;
 }
 .left-cart-item {
     display: flex;
@@ -298,18 +320,12 @@ table .pr-i {
     
 }
 
-.error {
-    background-color: #ff333389;
-    color: red;
-}
-
 .brands-list {
     margin: 5dvh 4dvw;
     display: grid;
     gap: 0 1.5dvw;
     grid-template-columns: repeat(auto-fill, minmax(14dvw, 1fr));
-    grid-template-rows: auto;
-    
+    grid-template-rows: auto;  
 }
 
 .brand-item {
@@ -339,4 +355,76 @@ table .pr-i {
 }
 .logout-btn a:active {
     color: white;
+}
+
+.check-out-title {
+    font-size: 2.5rem;
+    font-weight:300 ;
+    color: black;
+}
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1dvw;
+    
+}
+.check-form {
+    border: solid 1px #0000002d;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 3dvh 4dvw;
+    width: 50dvw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+
+}
+.purchasing-btn {
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    border-radius: 60px;
+    padding: 1dvh 0;
+    width: 100%;
+    text-decoration: none;
+    margin-top: 4dvh;
+    height:50px;
+    cursor:pointer;
+}
+
+.formm{
+    border-radius: 10px;
+    border: 3px solid rgb(0, 0, 0) ; 
+    padding: 2dvh ;
+    color: #cecece;
+    margin-bottom: 2dvh;
+    letter-spacing: 2px;
+}
+.formm-label {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-bottom: 3dvh;
+    display:block;
+}
+.visa-img{
+    position: absolute;
+    transform: translate(37dvw,7.5dvh);
+}
+.cartt-summary {
+    border: solid 1px #0000002d;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 0 1dvw 4dvh;
+    width: 20dvw;
+    height: 200PX;
+}
+.order-confirmation {
+    max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.line {
+    font-weight: bold;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }

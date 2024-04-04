@@ -117,30 +117,39 @@
             <h1 class="title-text">OUR HAPPY COSTUMERS</h1>
         </div>
         <div class="Feedbacks">
-            <div class="feedback">
-                <div><img src="assets/rating.png" alt="rating"/></div>
-                <div style="display: flex;align-items: center;">
-                    <h3>Sarah M.</h3>
-                    <img src="assets/check.png" alt="" height="20px"/>
+            <ul>
+                <li>
+                <div class="feedback">
+                    <div><img src="assets/rating.png" alt="rating"/></div>
+                    <div style="display: flex;align-items: center;">
+                        <h3>Brahmi Saif eddin</h3>
+                        <img src="assets/check.png" alt="" height="20px"/>
+                    </div>
+                    <p>As someone new to building PCs, I was a bit intimidated by the process at first. However, the ecommerce website for PC components made it incredibly simple. The user-friendly layout, combined with helpful guides and recommendations, gave me the confidence to select the right components for my needs.”</p>
                 </div>
-                <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
-            </div>
-            <div class="feedback">
-                <div><img src="assets/rating.png" alt="rating"/></div>
-                <div style="display: flex;align-items: center;">
-                    <h3>Sarah M.</h3>
-                    <img src="assets/check.png" alt="" height="20px"/>
+                
+               
+                </li>
+                <li><div class="feedback">
+                    <div><img src="assets/rating.png" alt="rating"/></div>
+                    <div style="display: flex;align-items: center;">
+                        <h3>Checbbi Med Ayoub</h3>
+                        <img src="assets/check.png" alt="" height="20px"/>
+                    </div>
+                    <p>"Shopping for PC components has never been easier! With a vast selection of high-quality products and seamless navigation, I was able to find everything I needed to build my dream gaming rig. The website's intuitive interface made browsing through different categories a breeze"</p>
                 </div>
-                <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
-            </div>
-            <div class="feedback">
-                <div><img src="assets/rating.png" alt="rating"/></div>
-                <div style="display: flex;align-items: center;">
-                    <h3>Sarah M.</h3>
-                    <img src="assets/check.png" alt="" height="20px"/>
+                </li>
+                <li>
+                <div class="feedback">
+                    <div><img src="assets/rating.png" alt="rating"/></div>
+                    <div style="display: flex;align-items: center;">
+                        <h3>Nguira Mohamed</h3>
+                        <img src="assets/check.png" alt="" height="20px"/>
+                    </div>
+                    <p>I've been a loyal customer of SetUpSprint for years, and for good reason. Not only does it offer an extensive range of PC components, but the customer service is also top-notch. Whenever I have a question or need assistance with my order, the support team is always quick to respond and goes above and beyond to ensure my satisfaction.”</p>
                 </div>
-                <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 

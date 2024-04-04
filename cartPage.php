@@ -10,9 +10,6 @@
         <script src="scripts.js"></script>
     </head>
     <body>
-        
-
-
         <!-- Header -->
         <header>
             <div class="left">
@@ -36,12 +33,41 @@
             <h1 class="cart-title">Your Cart</h1>
             <div class="cart-container">
                 <div class="cart-items">
+                    <!-- show all products in cart -->
+                    <?php 
+                        session_start();
+                        
+                        include "database.php";
+
+
+                        $products_in_cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
+                        $products = array();
+                        $subtotal = 7.00;
+                        $discounted =0.00 ;
+                        $before_discount = 0.00;
+                        if (isset($_SESSION['cart'])){
+                            $array_to_question_marks = implode(',', array_fill(0, count($products_in_cart), '?')); // (?,?,?,? ...) for the sql query
+                            $stmt = $connect->prepare('SELECT * FROM product WHERE ProductID IN (' . $array_to_question_marks . ')');
+
+                            $stmt->execute(array_keys($products_in_cart));
+
+                            $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                            
+                            foreach ($products as $product) {
+                                $ID = $product['ProductID'];
+                                $before_discount+=$product['OldPrice']*(int)$products_in_cart[$ID] ;
+                                if ($product['SpecialPrice']!=0) {
+                                    $subtotal+=$product['SpecialPrice']*(int)$products_in_cart[$ID] ;
+                                    $discounted+=$product['Discount']*(int)$products_in_cart[$ID] ;
+                                } else $subtotal+=$product['OldPrice']*(int)$products_in_cart[$ID] ;
+                        
+                    ?>
                     <div class="cart-item">
                         <div class="left-cart-item">
-                            <div><img src="assets/ryenCPU.png" width="80dvw" height="80dvh"></div>
+                            <div><img src="<?php echo $product['ImageURL'] ?>" width="80dvw" height="80dvh"></div>
                             <div class="cart-item-info">
-                                <h2>Product Name</h2>
-                                <h2>$399,9</h2>
+                                <h2><?php echo $product['ProductName']?></h2>
+                                <h2><?php echo ($product['SpecialPrice']!=0)?$product['SpecialPrice']:  $product['OldPrice']?></h2>
                             </div>
                         </div>
                         <div class="right-cart-item">
@@ -54,28 +80,38 @@
                             <button><img src="assets/trash.svg"></button>
                         </div>
                     </div>
+                    <?php } 
+                        $_SESSION['total-bd'] = $before_discount ;
+                        $_SESSION['ds'] = $discounted ;
+                        $per = ($subtotal / $before_discount)*100 ;
+                        if ($per<0 && $per>100) $per=0;
+                        $_SESSION['per'] = $per ;
+                        $_SESSION['total'] = $subtotal ;
+                    } else echo "<h1>Cart Empty</h1>" ?>
                 </div>
                 <div class="cart-summary">
                     <h2>Order Summary</h2>
                     <hr>
                     <div class="sum">
                         <h5>Subtotal</h5>
-                        <h4>$450</h4>
+                        <h4><?php echo $before_discount ?> DT</h4>
                     </div>
                     <div class="sum">
-                        <h5>Discount (-20%)</h5>
-                        <div class="discount-price">-$30</div>
+                        <h5>-<?php echo($_SESSION['per']>100)?0:$_SESSION['per']?>%</h5>
+                        <div class="discount-price">-<?php echo $discounted ?> DT</div>
                     </div>
                     <div class="sum">
                         <h5>Delivery Fee</h5>
-                        <h4 >$15</h4>
+                        <h4 >7DT</h4>
                     </div>
                     <hr>
                     <div class="sum">
                         <h5>Total</h5>
-                        <h4>$445</h4>
+                        <h4><?php echo $subtotal ?>DT</h4>
                     </div>
+                    <a href="<?php echo (isset($_SESSION['userFname']) && !empty($_SESSION['cart']) )? 'checkoutPage.php' : 'signinPage.php'; ?>">
                     <button class="filter-btn">Go to Chekout <img src="assets/right-arrow.svg" color="white"></button>
+                    </a>
                 </div>
                 
             </div>
@@ -87,7 +123,7 @@
             <div class="footer-container">
                 <div class="footer-item">
                     <img src="assets/SetUpSprint.svg" alt="logo" />
-                    <p>We have clothes that suits your style<br> and which you're proud to wear.<br> From women to men.</p>
+                    <p>Elevate your PC setup with precision.<br> Discover top-tier components tailored to<br> your needs.Explore our curated selection <br>for peak performance.Build your dream rig<br> with SetupSprint.</p>
                     <div class="socials"><img src="assets/Social.svg" alt="socials"/></div>
                 </div>
                 <div class="footer-item">
