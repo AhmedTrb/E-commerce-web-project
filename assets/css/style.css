@@ -56,7 +56,7 @@ ul li a {
 .hero-section {
     padding-top: 1%;
     margin-bottom: 0;
-    background-image: url(assets/hero\ bg.png);
+    background-image: url(../images/hero-bg.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

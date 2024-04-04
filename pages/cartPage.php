@@ -4,13 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SetUpSprint</title>
-        <link rel="stylesheet" href="style1.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="assets/SetUpSprint.svg" type="image/icon type">
-        <script src="scripts.js"></script>
+        <link rel="stylesheet" href="../assets/css/style1.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="icon" href="../assets/images/SetUpSprint.svg" type="image/icon type">     
     </head>
     <body>
-       <?php include "header.php" ?>
+       <?php include "../includes/header.php" ?>
         <!--  -->
         <section class="container">
             <h1 class="cart-title">Your Cart</h1>
@@ -19,7 +18,7 @@
                 <!-- cart items -->
                 <div class="cart-items">
                     <!-- show all products in cart -->
-                    <?php include "cartItemsLoader.php" ?>
+                    <?php include "../loaders/cartItemsLoader.php" ?>
                 </div>
 
                 <!-- cart summary  -->
@@ -44,13 +43,13 @@
                         <h4><?php echo $subtotal ?>DT</h4>
                     </div>
                     <a href="<?php echo (isset($_SESSION['userFname']) && !empty($_SESSION['cart']) )? 'checkoutPage.php' : 'signinPage.php'; ?>">
-                    <button class="filter-btn">Go to Chekout <img src="assets/right-arrow.svg" color="white"></button>
+                    <button class="filter-btn">Go to Chekout</button>
                     </a>
                 </div>
             </div>
         </section>
 
-        <?php include "footer.php" ?>
+        <?php include "../includes/footer.php" ?>
         <script src="script2.js"></script>
         
 </body>

@@ -1,7 +1,7 @@
 .left-image{
     width: 50%;
     height:100dvh;
-    background-image: url(assets/loginimg.png);
+    background-image: url(../images/loginimg.png);
     background-repeat: no-repeat;
 }
 

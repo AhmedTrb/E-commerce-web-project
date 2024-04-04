@@ -4,11 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SetUpSprint</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="style1.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/style1.css">
 
-        <link rel="icon" href="assets/SetUpSprint.svg" type="image/icon type">
-        <script src="scripts.js"></script>
+        <link rel="icon" href="../assets/images/SetUpSprint.svg" type="image/icon type">
     </head>
 <body>
     <section style="display:flex;align-items:center;">
@@ -16,7 +15,7 @@
         <div class="login-form">
             <h1 class="big-text">Create an Account</h1>
 
-            <form action="signup.php" method="POST">
+            <form action="../config/signup.php" method="POST">
                     <div style="display:flex;justify-content:space-between;gap:1dvw">
                         <div>
                             <label>First Name</label>

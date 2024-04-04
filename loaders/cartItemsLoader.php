@@ -1,7 +1,7 @@
 <?php
 session_start();
                         
-include "database.php";
+include "../includes/database.php";
 
 $products_in_cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
 $products = array();

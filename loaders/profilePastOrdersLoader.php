@@ -1,5 +1,5 @@
 <?php
-    include "database.php" ; 
+    include "../includes/database.php" ; 
     // selecting all orders for the current user
     $sql = "SELECT * FROM Orders WHERE ClientID = ?" ;
     $stm = $connect->prepare($sql);

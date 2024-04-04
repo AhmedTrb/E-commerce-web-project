@@ -6,7 +6,7 @@ if (isset($_POST["firstname"]) && isset($_POST["lastname"]) && isset($_POST["pho
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    include "database.php";
+    include "includes/database.php";
 
     $stmt = $connect->prepare("SELECT * FROM Clients WHERE FirstName = ? AND Email = ?");
     $stmt->execute([$username,$email]);

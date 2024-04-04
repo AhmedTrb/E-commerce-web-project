@@ -1,5 +1,6 @@
 <?php 
-include "database.php" ;
+
+include "../includes/database.php" ;
 
 session_start();
 
@@ -40,7 +41,7 @@ foreach ($_SESSION['cart'] as $productID => $quantity) {
 // Clear the cart after successful checkout
 unset($_SESSION['cart']);
 
-header("Location: orderConfirmedPage.php");
+header("Location: ../pages/orderConfirmedPage.php");
 exit();
 
 

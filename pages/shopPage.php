@@ -4,13 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SetUpSprint</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="assets/SetUpSprint.svg" type="image/icon type">
-        <script src="scripts.js"></script>
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="icon" href="../assets/images/SetUpSprint.svg" type="image/icon type">
+        <script src="../assets/js/scripts.js"></script>
     </head>
     <body>
 
-    <?php include "header.php" ?>
+    <?php include "../includes/header.php" ?>
 
         <!-- SHOP -->
         <section class="container main-shop">
@@ -18,7 +18,7 @@
             <div class="filters-card">
                 <div style="display:flex;justify-content:space-between;">
                     <h2 class="fliter-text">Filters</h2>
-                    <img src="assets/filter.svg">
+                    <img src="../assets/images/filter.svg">
                 </div>
                 <hr>
                 <!-- applied filters -->
@@ -87,7 +87,7 @@
                     </div>
                     <ul>
                         <!-- loading products -->
-                        <?php include "shopProductLoader.php" ?>
+                        <?php include "../loaders/shopProductLoader.php"; ?>
                     </ul>
                 </div>
                 <hr style="width: 90%;">
@@ -101,9 +101,9 @@
                         } else $page=1;
                         if ($page>1) $page--;
 
-                        echo"<a class='btn-p' href='shop.php?page=".$page."'>"; ?>
+                        echo"<a class='btn-p' href='shopPage.php?page=".$page."'>"; ?>
                             <div style="display:flex;justify-content:space-between;align-items:center;gap:1dvw">
-                                <img src="assets/left-arrow.svg"><div>Previous</div>
+                                <img src="../assets/images/left-arrow.svg"><div>Previous</div>
                             </div>
                         </a>
                     <!-- displaying page items -->
@@ -120,7 +120,7 @@
                             if ($total_pages>15){
                                 for ($i=1;$i<=$total_pages;$i++){
                                     if ($i <= 4 || (($i==$page || $i==$page-1 || $i==$page+1) && $i>4 && $i<=$total_pages-3) ||$i>= $total_pages - 3) {
-                                        echo "<a href='shop.php?page=" .$i."'>";
+                                        echo "<a href='shopPage.php?page=" .$i."'>";
                                         echo "<div " . (($i == $page) ? " class='curPage'" : " class='nrml-page'").">" . $i . "</div>";
                                         echo "</a> ";
                                     }
@@ -139,15 +139,15 @@
                             $page = $_GET['page'];
                         } else $page=1;
                     if ($page<$total_pages) $page++;
-                    echo"<a class='btn-p' href='shop.php?page=".$page."'>"; ?>
+                    echo"<a class='btn-p' href='shopPage.php?page=".$page."'>"; ?>
                         <div style="display:flex;justify-content:space-between;align-items:center;gap:1dvw">
-                            <div>Next</div><img src="assets/right-arrow.svg"> 
+                            <div>Next</div><img src="../assets/images/right-arrow.svg"> 
                         </div>  
                     </a>
                 </div>
             </div>
         </section>
 
-    <?php include "footer.php" ?>
+        <?php include "../includes/footer.php" ?>
 </body>
 </html>

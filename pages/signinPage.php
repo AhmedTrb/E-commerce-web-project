@@ -1,17 +1,12 @@
-<?php 
-    include ('database.php' );
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SetUpSprint</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="style1.css">
-
-        <link rel="icon" href="assets/SetUpSprint.svg" type="image/icon type">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/style1.css">
+        <link rel="icon" href="../assets/images/SetUpSprint.svg" type="image/icon type">
         
     </head>
 <body>
@@ -22,7 +17,7 @@
             <h1 class="big-text">Welcome Back !</h1>
 
             <label>Email</label>
-            <form action="login.php" method="POST" name="form">
+            <form action="../config/login.php" method="POST">
                 <input type="email" placeholder="email" name="email" required>
             
                 <label>Password</label>

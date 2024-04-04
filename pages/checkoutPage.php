@@ -4,13 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SetUpSprint</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="style1.css">
-        <link rel="icon" href="assets/SetUpSprint.svg" type="image/icon type">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/style1.css">
+        <link rel="icon" href="../assets/SetUpSprint.svg" type="image/icon type">
     </head>
     <body> 
         <?php session_start() ;?>
-        <?php include "header.php" ?>
+        <?php include "../includes/header.php" ?>
 
 
 
@@ -21,7 +21,7 @@
             <div class="check-form">    
                 <label class="formm-label">Card Number</label>
                 <input type="text" class="formm" style ="width:95%" placeholder="XXXX - XXXX - XXXX - XXXX">
-                <img class="visa-img" src="assets/visaa.svg"  >
+                <img class="visa-img" src="../assets/images/visaa.svg"  >
                 <div style="display:flex">
                     <div style="width:50%">
                             <label class="formm-label">Expiration Date</label>
@@ -43,9 +43,9 @@
                         </div>
                     </div>
                     <div>
-                        <form method="POST" action="orderManagement.php">
+                        <form method="POST" action="../config/orderManagement.php">
                             <input type="hidden" name="">
-                            <button class="purchasing-btn" type="submit">Confirm Purchase<img src="assets/right-arrow.svg" color="white"></button>
+                            <button class="purchasing-btn" type="submit">Confirm Purchase<img src="../assets/images/right-arrow.svg" color="white"></button>
                         </form>
                     </div>
                 </div>
@@ -73,5 +73,5 @@
             </div>   
         </section>
 
-        <?php include "footer.php" ?>
+        <?php include "../includes/footer.php" ?>
     </body>

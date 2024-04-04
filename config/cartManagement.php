@@ -2,14 +2,12 @@
 
 session_start();
 
-
-
 if (isset($_POST['q']) && isset($_POST['productID']) && is_numeric($_POST['productID'])){
     $quantity = $_POST['q'] ;
 
     $ID = $_POST['productID'];
 
-    include "database.php" ;
+    include "../includes/database.php" ;
 
     $stm = $connect->prepare('SELECT * FROM product WHERE ProductID = ?') ;
     $stm->execute([$ID]) ;
@@ -24,7 +22,7 @@ if (isset($_POST['q']) && isset($_POST['productID']) && is_numeric($_POST['produ
         }
     }
     var_dump($_SESSION);
-    header("Location:shop.php");
+    header("Location:../pages/shopPage.php");
 } else {
     header("Location:homePage.php");
     exit();

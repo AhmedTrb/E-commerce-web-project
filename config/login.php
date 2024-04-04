@@ -1,10 +1,10 @@
 <?php 
-include 'database.php' ;
+include '../includes/database.php' ;
 session_start();
 
 
 if (!isset($_SESSION["userFname"])) {
-    header('Location:signinPage.php'); 
+    header('Location:../pages/signinPage.php'); 
     if (isset($_POST['email']) && isset($_POST['password'])){
     
 
@@ -32,16 +32,16 @@ if (!isset($_SESSION["userFname"])) {
             $_SESSION["phone"] = $user['PhoneNumber'] ;
             $_SESSION["address"] = $user['Address'] ;
             $_SESSION["ClientID"] = $user['ClientID'] ;
-            header('location:profilePage.php'); 
+            header('Location:../pages/profilePage.php'); 
             exit();
             
         } else {
-            echo "<script>alert('incorrect email or password')</script>" ;
-            header('location:signinPage.php');
+            header('location:../pages/signinPage.php');
+            exit();
         }
     } 
 } else {
-    header('location:profilePage.php'); 
+    header('location:../pages/profilePage.php'); 
     exit();
 }
 
