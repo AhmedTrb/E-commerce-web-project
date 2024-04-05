@@ -77,7 +77,7 @@ git clone https://github.com/AhmedTrb/E-commerce-web-project.git
   
 4. Open the project : "[http://localhost/homePage.php](http://localhost/E-commerce-web-project/homePage.php)"
 ***
-**User account :**
+**User account:**
 email "user@test.com" 
 password "user"
 
@@ -86,17 +86,21 @@ password "user"
 ![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/ec660008-b3e2-4a8d-b3cf-941a8c6a96a6)
 
 
-- Shop :
+### Shop :
 ![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/9b192f51-ae2b-4bfd-b11a-88b7cecf03ea)
-- Product Detail :
+### Product Detail :
 ![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/5a93442a-a751-4a91-a655-1cb746b3717c)
-- Login :
+### Login :
 ![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/d242a7c7-c387-4969-9790-0672d1d07694)
-- Signup :
-![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/4b22b7dc-8657-404f-b30f-048616e309e2)
-- Profile Page :
-![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/2d1ace03-d2f6-4dbd-97dc-a5912081118f)
+### Signup :
+![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/62d31c3f-0a96-4da7-b059-fd7f91798d05)
 
+### Profile Page :
+![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/2d1ace03-d2f6-4dbd-97dc-a5912081118f)
+### Cart :
+![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/89a8472e-27a5-4133-89d4-fda8c7c2f63b)
+### Checkout :
+![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/9a8ce7c4-b60f-4b7e-8723-fbb6ab4ed341)
 
 
 
