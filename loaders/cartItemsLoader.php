@@ -29,7 +29,7 @@ if (isset($_SESSION['cart'])){
         <!-- displaying product items in cart -->
         <div class="cart-item">
         <div class="left-cart-item">
-            <div><img src="<?php echo $product['ImageURL'] ?>" width="80dvw" height="80dvh"></div>
+            <div><img src="<?php echo $product['ImageURL'] ?>"></div>
             <div class="cart-item-info">
                 <h2><?php echo $product['ProductName']?></h2>
                 <h2><?php echo ($product['SpecialPrice']!=0)?$product['SpecialPrice']:  $product['OldPrice']?></h2>
@@ -42,7 +42,8 @@ if (isset($_SESSION['cart'])){
                 <button onclick='increaseQuantity("qt")'>+</button>
             </div>
             
-            <button><img src="assets/trash.svg"></button>
+            <img src="../assets/images/trash.svg">
+            
         </div>
         </div>
 <?php } 

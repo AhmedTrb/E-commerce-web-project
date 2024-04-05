@@ -117,16 +117,20 @@
                         ?>
                         <div class="pages">
                             <?php
-                            if ($total_pages>15){
-                                for ($i=1;$i<=$total_pages;$i++){
-                                    if ($i <= 4 || (($i==$page || $i==$page-1 || $i==$page+1) && $i>4 && $i<=$total_pages-3) ||$i>= $total_pages - 3) {
-                                        echo "<a href='shopPage.php?page=" .$i."'>";
-                                        echo "<div " . (($i == $page) ? " class='curPage'" : " class='nrml-page'").">" . $i . "</div>";
+                             if (isset($_GET["page"])) {
+                                $page = $_GET['page'];
+                            } else $page=1;
+                            if ($total_pages > 10) {
+                                for ($i = 1; $i <= $total_pages; $i++) {
+                                    if ($i <= 3 || $i > $total_pages - 3 ||($i >= $page && $i <= $page + 2 && $page >= 4 && $page <= $total_pages - 3)) {
+                                        echo "<a href='shopPage.php?page=" . $i . "'>";
+                                        echo "<div" . (($i == $page) ? " class='curPage'" : " class='nrml-page'") . ">" . $i . "</div>";
                                         echo "</a> ";
+                                    } else if ($i == 4 || $i == $total_pages - 3) {
+                                        echo "<span>...</span>";
                                     }
-                                    else echo ".";
-                                } 
-                            } else {
+                                }
+                            }else {
                                 for ($i=1;$i<=$total_pages;$i++){
                                     echo "<div class='page-item'>".$i."</div>" ;
                                 } 

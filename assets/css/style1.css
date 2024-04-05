@@ -332,12 +332,15 @@ table .pr-i {
     width: 27dvh;
     height: 27dvh;
     padding: 2dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 5dvh;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: rgba(149, 157, 165, 0.217) 0px 8px 24px;
+}
+.brand-item h1 {
+    font-size: 1.2rem;
 }
 .brand-img {
     width:5dvw;
@@ -419,10 +422,15 @@ table .pr-i {
     height: 200PX;
 }
 .order-confirmation {
-    max-width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+    display: flex;
+    text-align: center;
+    
 }
+.img-conf {
+    display: block;
+    margin: 7dvh auto;
+}
+
 .line {
     font-weight: bold;
     border-top: 2px solid black;

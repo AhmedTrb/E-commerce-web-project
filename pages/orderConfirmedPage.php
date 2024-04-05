@@ -11,10 +11,10 @@
     <body> 
         <?php include "../includes/header.php"?>
         
-        <div clas="order-confirmation">
-            <img src="../assets/images/tick.svg" alt="tick image">
-            <h1>Your order has been <br>confirmed</h1>
-        </div>
+        <main clas="order-confirmation">
+            <img src="../assets/images/check2.svg" class="img-conf" />
+            <h1 class="title-text">Your order has been <br>confirmed</h1>
+            </main>
         
         
         

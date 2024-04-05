@@ -34,7 +34,7 @@
     <section class="hero-section">
         <div class="hero-left">
             <h1 class="hero-text">ALL YOU NEED <br>TO BUILD<br>A PERFECT<br> SETUP</h1>
-            <button class="shop-btn"><a href="">Shop Now</a></button>
+            <button class="shop-btn"><a href="pages/shopPage.php">Shop Now</a></button>
         </div>
     </section>
     <!-- ------------------------------------------------------------------------------------------------------------------- -->
@@ -89,18 +89,26 @@
         <div class="products-list">
             <ul>
                 <?php 
-                    for ($x=0; $x<5; $x++) {
-                        echo '<li><a href="">
-                                <div class="product-item">
-                                    <div><img src="assets/images/ryenCPU.png" alt="product" class="prd-img"/></div>
-                                    <p class="pr-name">AMD Ryzen 7 5800X CPU</p>
-                                    <img src="assets/images/rating.svg" alt="rating">
-                                    <p class="pr-price">399.99$</p>  
-                                </div>
-                            </a></li>';
-                    } 
+                    require_once "includes/database.php" ;
+
+                    $quer = "SELECT * FROM product WHERE ProductID IN (4,18,80,150,76)";
+                    $stm = $connect->query($quer) ;
+                    $result = $stm->fetchAll(PDO::FETCH_ASSOC);
+                    
+                    foreach($result as $row) { $url = $row["ImageURL"] ;?>
+                        <!-- displaying product card -->
+                        <li><a href="pages/productDetailPage.php?ID=<?php echo"$row[ProductID]"?>" >
+                        <div class="product-item">
+                            <div><img src="<?php echo $url ?>" alt="product" class="prd-img"/></div>
+                            <p class="pr-name"><?php echo $row["ProductName"] ?></p>
+                            <img src="assets/images/rating.svg" alt="rating">
+                            <p class="pr-price"><?php echo $row["OldPrice"] ?> DT</p>  
+                        </div>
+                        </a></li>
+                    
+                    <?php } ?>
                 
-                ?>
+                
             </ul>
         </div>
 
@@ -130,7 +138,7 @@
                 <li><div class="feedback">
                     <div><img src="assets/images/rating.png" alt="rating"/></div>
                     <div style="display: flex;align-items: center;">
-                        <h3>Checbbi Med Ayoub</h3>
+                        <h3>Chebbi Med Ayoub</h3>
                         <img src="assets/images/check.svg" alt="" height="20px"/>
                     </div>
                     <p>"Shopping for PC components has never been easier! With a vast selection of high-quality products and seamless navigation, I was able to find everything I needed to build my dream gaming rig. The website's intuitive interface made browsing through different categories a breeze"</p>
