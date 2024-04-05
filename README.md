@@ -72,8 +72,8 @@ git clone https://github.com/AhmedTrb/E-commerce-web-project.git
 - if mysql is running on a different port change the port number in includes/database.php and DB-setup/scraping_products_data 
 3. Setup the database :
    - open ["http://localhost/phpmyadmin"](http://localhost/phpmyadmin/) in your browser and create a database named "setupsprint_ecommerce_website";
-   - execute the SQL code inside the DB-setup folder
-   - execute the Python code to load data into the DB (all data was scraped from an other website)
+   - execute the SQL queries inside the DB-setup folder
+   - execute the Python code to load data into the DB (all data was scraped from another website)
   
 4. Open the project : "[http://localhost/homePage.php](http://localhost/E-commerce-web-project/homePage.php)"
 ***
