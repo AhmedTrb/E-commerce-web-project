@@ -82,7 +82,8 @@ email "user@test.com"
 password "user"
 
 ## Screenshots : 
-- home page :
+
+### home page :
 ![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/ec660008-b3e2-4a8d-b3cf-941a8c6a96a6)
 
 
