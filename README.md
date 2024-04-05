@@ -88,7 +88,12 @@ password "user"
 
 - Shop :
 ![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/9b192f51-ae2b-4bfd-b11a-88b7cecf03ea)
-
+- Product Detail :
+![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/5a93442a-a751-4a91-a655-1cb746b3717c)
+- Login :
+![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/d242a7c7-c387-4969-9790-0672d1d07694)
+- Signup :
+![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/4b22b7dc-8657-404f-b30f-048616e309e2)
 - Profile Page :
 ![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/2d1ace03-d2f6-4dbd-97dc-a5912081118f)
 
