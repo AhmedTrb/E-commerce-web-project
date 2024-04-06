@@ -77,9 +77,6 @@ git clone https://github.com/AhmedTrb/E-commerce-web-project.git
   
 4. Open the project : "[http://localhost/homePage.php](http://localhost/E-commerce-web-project/homePage.php)"
 ***
-**User account:**
-email "user@test.com" 
-password "user"
 
 ## Screenshots : 
 
