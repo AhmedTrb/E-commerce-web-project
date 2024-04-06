@@ -72,26 +72,36 @@ git clone https://github.com/AhmedTrb/E-commerce-web-project.git
 - if mysql is running on a different port change the port number in includes/database.php and DB-setup/scraping_products_data 
 3. Setup the database :
    - open ["http://localhost/phpmyadmin"](http://localhost/phpmyadmin/) in your browser and create a database named "setupsprint_ecommerce_website";
-   - execute the SQL code inside the DB-setup folder
-   - execute the Python code to load data into the DB (all data was scraped from an other website)
+   - execute the SQL queries inside the DB-setup folder
+   - execute the Python code to load data into the DB (all data was scraped from another website)
   
 4. Open the project : "[http://localhost/homePage.php](http://localhost/E-commerce-web-project/homePage.php)"
 ***
-**User account :**
+**User account:**
 email "user@test.com" 
 password "user"
 
 ## Screenshots : 
-- home page :
+
+### home page :
 ![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/ec660008-b3e2-4a8d-b3cf-941a8c6a96a6)
 
 
-- Shop :
+### Shop :
 ![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/9b192f51-ae2b-4bfd-b11a-88b7cecf03ea)
+### Product Detail :
+![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/5a93442a-a751-4a91-a655-1cb746b3717c)
+### Login :
+![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/d242a7c7-c387-4969-9790-0672d1d07694)
+### Signup :
+![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/62d31c3f-0a96-4da7-b059-fd7f91798d05)
 
-- Profile Page :
+### Profile Page :
 ![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/2d1ace03-d2f6-4dbd-97dc-a5912081118f)
-
+### Cart :
+![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/89a8472e-27a5-4133-89d4-fda8c7c2f63b)
+### Checkout :
+![image](https://github.com/AhmedTrb/E-commerce-web-project/assets/24763713/9a8ce7c4-b60f-4b7e-8723-fbb6ab4ed341)
 
 
 
