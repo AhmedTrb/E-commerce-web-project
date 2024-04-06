@@ -55,15 +55,16 @@
                 <hr>
                 <div class="bot">
                     <div class="quantiy">
-                        <button onclick="decreaseQuantity('Q')">-</button>
+                        <button onclick="decreaseQuantity('Q') ;decreaseQuantity('realQ')">-</button>
                         <form action="../config/cartManagement.php" method='POST'>
                             <input type="text" id="Q" name="quantity" value="1" min="1" />
+                            <input type="hidden" name="qua" value="1" min="1" />
                         </form>
-                        <button onclick="increaseQuantity('Q')">+</button>
+                        <button onclick="increaseQuantity('Q') ;increaseQuantity('realQ')">+</button>
                     </div>
                     <form action="../config/cartManagement.php" method='POST'>
                         <input class="add-cart-btn" type="submit" name="add_to_cart" value="Add to Cart"/>
-                        <input type="hidden" name='q' value="1">
+                        <input type="hidden" name='q' value="1" id="realQ">
                         <input type="hidden" name='productID' value="<?php echo $product['ProductID'] ?>">
                     </form>
                 </div>
@@ -76,6 +77,6 @@
         
 
         <?php include "../includes/footer.php" ?>
-        <script src="../assets/js/cript2.js"></script>
+        <script src="../assets/js/script2.js"></script>
 </body>
 </html>

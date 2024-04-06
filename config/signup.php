@@ -6,7 +6,7 @@ if (isset($_POST["firstname"]) && isset($_POST["lastname"]) && isset($_POST["pho
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    include "includes/database.php";
+    include "../includes/database.php";
 
     $stmt = $connect->prepare("SELECT * FROM Clients WHERE FirstName = ? AND Email = ?");
     $stmt->execute([$username,$email]);
@@ -18,6 +18,6 @@ if (isset($_POST["firstname"]) && isset($_POST["lastname"]) && isset($_POST["pho
         // $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $stmt = $connect->prepare("INSERT INTO Clients (FirstName,LastName,Email,PasswordHash,Address,PhoneNumber) VALUES (?, ? , ?, ? ,? ,?)");
         $stmt->execute([$firstname, $lastname,$email,$password,"Avenue Habib Bourgiba 8050 Hammamet",$phonenumber]);
-        header("Location:signinPage.php");
+        header("Location:../pages/signinPage.php");
     }
 }

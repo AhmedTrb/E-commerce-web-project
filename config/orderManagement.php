@@ -5,7 +5,7 @@ include "../includes/database.php" ;
 session_start();
 
 $cliendID = $_SESSION['ClientID'] ;
-$orderDate = date('Y-m-d');
+$orderDate = date('Y-m-d H-i-s');
 $total = $_SESSION['total'];
 $order_status  = "Pending" ;
 

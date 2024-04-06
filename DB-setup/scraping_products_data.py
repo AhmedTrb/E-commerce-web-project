@@ -83,7 +83,7 @@ D = {
 cnx = mysql.connector.connect(
         host='localhost',
         user='root',
-        port='3307', # check if mysql is running on port 3307
+        port='3307', # check if mysql is running on port 3307 on your computer
         password='',
         database='setupsprint_ecommerce_website'
 )

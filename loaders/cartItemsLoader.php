@@ -29,16 +29,16 @@ if (isset($_SESSION['cart'])){
         <!-- displaying product items in cart -->
         <div class="cart-item">
         <div class="left-cart-item">
-            <div><img src="<?php echo $product['ImageURL'] ?>"></div>
+            <div><img src="<?php echo $product['ImageURL'] ?>" width="100dvw" height="100dvh"></div>
             <div class="cart-item-info">
                 <h2><?php echo $product['ProductName']?></h2>
-                <h2><?php echo ($product['SpecialPrice']!=0)?$product['SpecialPrice']:  $product['OldPrice']?></h2>
+                <h2><?php echo ($product['SpecialPrice']!=0)?$product['SpecialPrice']:  $product['OldPrice']?> DT</h2>
             </div>
         </div>
         <div class="right-cart-item">
             <div class="cart-quantity">
                 <button onclick='decreaseQuantity("qt")'>-</button>
-                <div id="qt">1</div>
+                <div id="qt"><?php echo $products_in_cart[$ID] ?> </div>
                 <button onclick='increaseQuantity("qt")'>+</button>
             </div>
             
@@ -53,3 +53,5 @@ $per = ($discounted / $before_discount)*100 ;
 $_SESSION['per'] = $per;
 $_SESSION['total'] = $subtotal ;
 } else echo "<h1>Cart Empty</h1>" ?>
+
+<script src="../assets/js/script2.js"></script>

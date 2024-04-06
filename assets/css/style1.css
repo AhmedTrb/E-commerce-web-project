@@ -241,6 +241,7 @@ form input {
     border-radius: 20px;
     background-color: #ffffff;
     padding: 2dvh 1dvw;
+    height: fit-content;
     width: 20dvw;
 }
 .cart-summary h2 {

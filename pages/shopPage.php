@@ -122,7 +122,7 @@
                             } else $page=1;
                             if ($total_pages > 10) {
                                 for ($i = 1; $i <= $total_pages; $i++) {
-                                    if ($i <= 3 || $i > $total_pages - 3 ||($i >= $page && $i <= $page + 2 && $page >= 4 && $page <= $total_pages - 3)) {
+                                    if ($i <= 3 || $i > $total_pages - 3 ||($i >= $page-1 && $i <= $page + 1 && $page >= 4 && $page <= $total_pages - 3)) {
                                         echo "<a href='shopPage.php?page=" . $i . "'>";
                                         echo "<div" . (($i == $page) ? " class='curPage'" : " class='nrml-page'") . ">" . $i . "</div>";
                                         echo "</a> ";

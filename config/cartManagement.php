@@ -1,8 +1,7 @@
 <?php
-
 session_start();
 
-if (isset($_POST['q']) && isset($_POST['productID']) && is_numeric($_POST['productID'])){
+if (isset($_POST['q']) && isset($_POST['productID'])){
     $quantity = $_POST['q'] ;
 
     $ID = $_POST['productID'];
@@ -21,10 +20,9 @@ if (isset($_POST['q']) && isset($_POST['productID']) && is_numeric($_POST['produ
             $_SESSION['cart'] = array($ID => $quantity) ;
         }
     }
-    var_dump($_SESSION);
     header("Location:../pages/shopPage.php");
 } else {
-    header("Location:homePage.php");
+    header("Location:../homePage.php");
     exit();
 }
             
