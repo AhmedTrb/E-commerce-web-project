@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 $host = 'localhost' ;
 $dbname = 'setupsprint_ecommerce_website';
