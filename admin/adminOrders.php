@@ -4,13 +4,13 @@
     <link rel="stylesheet" href="admin.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin orders</title>
+    <title>SetUpSprint</title>
 </head>
 <body>
     <nav>
         <div>
           
-          <img src="assets/SetUpSprint.svg" class="logo"></img>
+          <img src="../assets/images/SetUpSprint.svg" class="logo"></img>
         </div>
         <div style="flex-basis: auto;">
           <form class="search-form">
@@ -24,19 +24,19 @@
       <div class="mpage">
         <div class="lfttable" >
             <div class="tablrow">
-                <div class="tablecol"> <img src="assets/dashboard.png" >      </div>
-                <div class="tablecol"> <a href="admindashbord.html"> Dashboard </a>   </div>
+                <div class="tablecol"> <img src="../assets/images/dashboard.png" >      </div>
+                <div class="tablecol"> <a href="./adminDashboard.php"> Dashboard </a>   </div>
             </div>
           <div class="tablrow">
-            <div class="tablecol"> <img src="assets/costumers.png" >      </div>
+            <div class="tablecol"> <img src="../assets/images/costumers.png" >      </div>
             <div class="tablecol"> <a href="admindashbord.html">Costumers   </a>   </div>
           </div>
           <div class="tablrow">
-            <div class="tablecol"> <img src="assets/orders.png" >      </div>
-            <div class="tablecol"><a href="adminorders.html"> Orders  </a>    </div>
+            <div class="tablecol"> <img src="../assets/images/orders.png" >      </div>
+            <div class="tablecol"><a href="./adminOrders.php"> Orders  </a>    </div>
           </div>
           <div class="tablrow">
-            <div class="tablecol"> <img src="assets/products.png" >      </div>
+            <div class="tablecol"> <img src="../assets/images/products.png" >      </div>
             <div class="tablecol"> <a href="productDetailPage.php">Products   </a>   </div>
           </div>
         </div>
@@ -73,21 +73,6 @@
             </div>
                 
         </div>
-
-
-
-
-
-
-
     </div>
-
-
-
-
-
-
-
-    
 </body>
 </html>

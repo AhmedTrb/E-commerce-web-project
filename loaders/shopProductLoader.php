@@ -1,13 +1,15 @@
 <?php 
 include_once "../includes/database.php" ;
 
-$prod_per_page = 12 ;
+$prod_per_page = 16 ;
 if (isset($_GET["page"])) {
     $page = $_GET['page'];
 } else $page=1;
 
 $start_from = ($page-1)*$prod_per_page ;
 
+
+// selecting all products
 $quer = "SELECT * FROM product LIMIT $start_from , $prod_per_page";
 $stm = $connect->query($quer) ;
 $result = $stm->fetchAll(PDO::FETCH_ASSOC);

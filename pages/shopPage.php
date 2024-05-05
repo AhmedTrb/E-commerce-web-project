@@ -23,18 +23,12 @@
                 <hr>
                 <!-- applied filters -->
                 <div class="filter-detail">
+                    <form action="" method="post">
                         <label class="main">CPU
                             <input type="checkbox">
                             <span class="checkbox-container"></span>
                         </label>
-                        <label class="main">GPU
-                            <input type="checkbox">
-                            <span class="checkbox-container"></span>
-                        </label>
-                        <label class="main">Intel
-                            <input type="checkbox">
-                            <span class="checkbox-container"></span>
-                        </label> 
+                    </form>
                 </div>
                 <!-- brand filter -->
                 <h2 class="fliter-text">Brands</h2>
@@ -44,30 +38,23 @@
                         <input type="checkbox">
                         <span class="checkbox-container"></span>
                     </label>
-                    <label class="main">Red Dragon
-                        <input type="checkbox">
-                        <span class="checkbox-container"></span>
-                    </label>
-                    <label class="main">AMD
-                        <input type="checkbox">
-                        <span class="checkbox-container"></span>
-                    </label>
+                    
                 </div>
                 <!-- category filter -->
                 <h2 class="fliter-text">Categories</h2>
                 <hr>
                 <div class="filter-detail">
-                    <form>
+                    <form action="" method="post">
                         <label class="main">Mouse
                             <input type="checkbox">
                             <span class="checkbox-container"></span>
                         </label>
                         <label class="main">CPU
-                            <input type="checkbox">
+                            <input type="checkbox" value="CPU">
                             <span class="checkbox-container"></span>
                         </label>
                         <label class="main">GPU
-                            <input type="checkbox">
+                            <input type="checkbox" value="GPU">
                             <span class="checkbox-container"></span>
                         </label>
                     </form>
@@ -75,7 +62,9 @@
                 
                 
                 <hr>
-                <input class="filter-btn" value="Apply filters" type="submit">
+                <form>
+                    <input class="filter-btn" value="Apply filters" type="submit">
+                </form>
 
             </div>
 
@@ -108,7 +97,7 @@
                         </a>
                     <!-- displaying page items -->
                     <?php
-                        $prod_per_page = 12 ;
+                        $prod_per_page = 16 ;
                         $sql = "SELECT COUNT(ProductID) AS total FROM product";
                         $stm = $connect->query($sql) ;
                         $row = $stm->fetch(PDO::FETCH_ASSOC);

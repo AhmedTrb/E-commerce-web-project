@@ -4,15 +4,14 @@
   <link rel="stylesheet" href="admin.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Navbar</title>
+  <title>SetUpSprint</title>
 </head>
 <body>
 
 
 <nav>
   <div>
-    
-    <img src="assets/SetUpSprint.svg" class="logo"></img>
+    <img src="../assets/images/SetUpSprint.svg" class="logo"></img>
   </div>
   <div style="flex-basis: auto;">
     <form class="search-form">
@@ -26,19 +25,19 @@
 <div class="mpage">
   <div class="lfttable" >
     <div class="tablrow">
-        <div class="tablecol"> <img src="assets/dashboard.png" >      </div>
+        <div class="tablecol"> <img src="../assets/images/dashboard.png" >      </div>
         <div class="tablecol"> <a href="admindashbord.html"> Dashboard </a>   </div>
     </div>
   <div class="tablrow">
-    <div class="tablecol"> <img src="assets/costumers.png" >      </div>
+    <div class="tablecol"> <img src="../assets/images/costumers.png" >      </div>
     <div class="tablecol"> <a href="admindashbord.html">Costumers   </a>   </div>
   </div>
   <div class="tablrow">
-    <div class="tablecol"> <img src="assets/orders.png" >      </div>
+    <div class="tablecol"> <img src="../assets/images/orders.png" >      </div>
     <div class="tablecol"><a href="adminorders.html"> Orders  </a>    </div>
   </div>
   <div class="tablrow">
-    <div class="tablecol"> <img src="assets/products.png" >      </div>
+    <div class="tablecol"> <img src="../assets/images/products.png" >      </div>
     <div class="tablecol"> <a href="productDetailPage.php">Products   </a>   </div>
   </div>
     
@@ -51,7 +50,7 @@
     <div class="tbl1">
       <div class="col1"> 
         <div class="ll">
-          <img src="assets/reseauu.png">
+          <img src="../assets/images/reseauu.png">
           
 
         </div>
@@ -63,7 +62,7 @@
       </div>
       <div class="col1"> 
         <div class="ll">
-          <img src="assets/money.png">
+          <img src="../assets/images/money.png">
         </div>
         <div class="rr">
           <p>This month</p>
@@ -87,7 +86,6 @@
         <div class="perc">
           <h3 id="a">+15% </h3>
           <h3 id="b"> since last month </h3>
-
         </div>
         
       </div>
@@ -97,14 +95,11 @@
         <div class="perc">
           <h3 id="a">+15% </h3>
           <h3 id="b"> since last month </h3>
-
         </div>
-        
       </div>
-    
     </div>
     <div  class="tbl2" colspan="5">
-      <img src="assets/Earnings Chart.png">
+      <img src="../assets/images/Earnings Chart.png">
     </div>
     <table class="tbl3">
       <th colspan="2">Most Selled Products </th>
@@ -112,19 +107,8 @@
         <td>ASUS ROG Strix B550-F Gaming Motherboard</td>
         <td>70 sales</td>
       </tr>
-
-      </div>
-
-
-
-      
     </table>
-  
-  
-  
-  
   </div>
-
 </div>
 
 
