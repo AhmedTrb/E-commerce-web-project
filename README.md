@@ -17,18 +17,22 @@ VIDEO DEMO : [DEMO](https://drive.google.com/file/d/1I5cI4qAhnhip99CPLuo-0v1Wjxn
 project/
 │   homePage.php
 │   README.md
-|
+│
+├───admin
+│       admin.css
+│       adminDashboard.php
+│       adminOrders.php
+│
 ├───assets
-│   ├───css/
+│   ├───css
 │   │       style.css
 │   │       style1.css
-│   │
+|   |
 │   ├───images/
-│   └───js/
-│           script2.js
-│           scripts.js
+│   │
+│   └───js
 │
-├───config/
+├───config
 │       cartManagement.php
 │       login.php
 │       logout.php
