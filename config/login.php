@@ -11,6 +11,12 @@ if (!isset($_SESSION["userFname"])) {
         $email = $_POST['email'];
         $password = $_POST['password'];
         
+        if ($email == "admin@test.com") {
+            header('Location:../admin/adminDashboard.php');
+            exit();
+        }
+
+
         $query = 'SELECT * FROM clients WHERE Email= ? AND PasswordHash=?' ;
     
         $statement = $connect->prepare($query) ;

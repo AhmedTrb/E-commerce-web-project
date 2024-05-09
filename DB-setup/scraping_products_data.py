@@ -1,8 +1,6 @@
 from bs4 import BeautifulSoup
 import requests as req
-import csv 
 from random import randint,uniform
-from bs4 import BeautifulSoup
 import mysql.connector
 
 

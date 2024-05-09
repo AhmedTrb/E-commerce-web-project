@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="admin.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/SetUpSprint.svg" type="image/icon type">
     <title>SetUpSprint</title>
 </head>
 <body>

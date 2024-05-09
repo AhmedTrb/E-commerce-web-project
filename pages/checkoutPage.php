@@ -6,6 +6,7 @@
         <title>SetUpSprint</title>
         <link rel="stylesheet" href="../assets/css/style.css">
         <link rel="stylesheet" href="../assets/css/style1.css">
+        <link rel="icon" href="../assets/images/SetUpSprint.svg" type="image/icon type">
         <link rel="icon" href="../assets/SetUpSprint.svg" type="image/icon type">
     </head>
     <body> 

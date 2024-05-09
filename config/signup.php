@@ -15,9 +15,9 @@ if (isset($_POST["firstname"]) && isset($_POST["lastname"]) && isset($_POST["pho
     if ($user) {
         echo "<script>alert('user already exists in database')</script>";
     } else {
-        // $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $stmt = $connect->prepare("INSERT INTO Clients (FirstName,LastName,Email,PasswordHash,Address,PhoneNumber) VALUES (?, ? , ?, ? ,? ,?)");
-        $stmt->execute([$firstname, $lastname,$email,$password,"Avenue Habib Bourgiba 8050 Hammamet",$phonenumber]);
+        $stmt->execute([$firstname, $lastname,$email,$hashed_password,"Avenue Habib Bourgiba 8050 Hammamet",$phonenumber]);
         header("Location:../pages/signinPage.php");
     }
 }

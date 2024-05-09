@@ -36,7 +36,7 @@
     </div>
     <hr style="width: 90%;">
     <div class="flex-items">
-        <p class="copyrights" >Shop.co © 2000-2023, All Rights Reserved</p>
+        <p class="copyrights" >Shop.co © 2000-2024, All Rights Reserved</p>
         <div class="flex">
             <img src="../assets/images/visa.svg" alt="visa"/>
         </div> 
