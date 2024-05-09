@@ -25,7 +25,7 @@
                 <div class="filter-detail">
                     <form action="" method="post">
                         <label class="main">CPU
-                            <input type="checkbox">
+                            <input type="checkbox" checked>
                             <span class="checkbox-container"></span>
                         </label>
                     </form>
@@ -44,19 +44,26 @@
                 <h2 class="fliter-text">Categories</h2>
                 <hr>
                 <div class="filter-detail">
+                    <?php 
+                        include_once "../includes/database.php" ;
+                        $query = "SELECT DISTINCT Category FROM Product";
+
+                        $stmt = $connect->prepare($query);
+                        $stmt->execute();
+                        
+                        $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    
+                    ?>
                     <form action="" method="post">
-                        <label class="main">Mouse
-                            <input type="checkbox">
-                            <span class="checkbox-container"></span>
-                        </label>
-                        <label class="main">CPU
-                            <input type="checkbox" value="CPU">
-                            <span class="checkbox-container"></span>
-                        </label>
-                        <label class="main">GPU
-                            <input type="checkbox" value="GPU">
-                            <span class="checkbox-container"></span>
-                        </label>
+
+                        <?php 
+                            foreach ($categories as $category) {
+                                echo "<label class='main'>".$category['Category']."
+                                <input type='checkbox'>
+                                    <span class='checkbox-container'></span>
+                                </label>";
+                            }
+                        ?>
                     </form>
                 </div>
                 

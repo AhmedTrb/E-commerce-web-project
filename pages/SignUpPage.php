@@ -39,10 +39,9 @@
                 <label>Password</label>
                 <input type="password" placeholder="password" name="password"required>
                 <input type="password" placeholder="Confirm password" name="confirmpassword" required>
-                <p>By signing up I agree to the  <span><a href="">Terms & conditions</a></span></p>
+                <p>By signing up I agree to the  <span><a href="https://www.termsofservicegenerator.net/live.php?token=wYC2mKAGfF6YJ32SmwZkk9HUDiTBVKuO">Terms & conditions</a></span></p>
                 <input class="log-btn" type="submit" name="signup" value="Signup">
             </form>
-
         </div>
     </section>
 </body>

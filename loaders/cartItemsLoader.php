@@ -9,7 +9,7 @@ $subtotal = 7.00;
 $discounted =0.00 ;
 $before_discount = 0.00;
 $per=0;
-if (isset($_SESSION['cart'])){
+if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
     $array_to_question_marks = implode(',', array_fill(0, count($products_in_cart), '?')); // (?,?,?,? ...) for the sql query
     $stmt = $connect->prepare('SELECT * FROM product WHERE ProductID IN (' . $array_to_question_marks . ')');
 
@@ -40,9 +40,14 @@ if (isset($_SESSION['cart'])){
                 <button onclick='decreaseQuantity("qt")'>-</button>
                 <div id="qt"><?php echo $products_in_cart[$ID] ?> </div>
                 <button onclick='increaseQuantity("qt")'>+</button>
+                <script src="../assets/js/script2.js"></script>
             </div>
             
-            <img src="../assets/images/trash.svg">
+            <form method="post" action="../config/deleteCartItem.php">
+                <input type='hidden' name='productID' value="<?php echo $ID ?>">
+                <input type='image' src='../assets/images/trash.svg' alt='Delete' width="30px" height="30px" style="border:none;cursor:pointer;margin-right:20px;">
+                
+            </form>
             
         </div>
         </div>
@@ -54,4 +59,3 @@ $_SESSION['per'] = $per;
 $_SESSION['total'] = $subtotal ;
 } else echo "<h1>Cart Empty</h1>" ?>
 
-<script src="../assets/js/script2.js"></script>
